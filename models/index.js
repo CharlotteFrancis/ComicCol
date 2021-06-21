@@ -7,12 +7,12 @@ const Comment = require('./Comment.js')
 // your relationships go here...
 
 // a user has many comments
-// MIGHT NEED TO ADD ONDELETE: 'CASCADE'
 User.hasMany(Comment, {
   foreignKey: 'user_id'
 })
 
 // a comment belongs to a single user
+// MIGHT NEED TO ADD ONDELETE: 'CASCADE'
 Comment.belongsTo(User, {
   foreignKey: 'user_id'
 })
