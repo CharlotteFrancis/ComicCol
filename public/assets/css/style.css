@@ -1,3 +1,7 @@
+#index-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/header.jpg");
+}
+
 .floralWhite {
   background-color: #FFFCF2;
 }
