@@ -1,8 +1,25 @@
-
+/* header */
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
+/* carousel */
+.carousel .carousel-item {
+/* add sizing here with !important */
+width: 20% !important;
+height: 70% !important;
+}
+/* overflow visible to remove cutoff */
+.carousel {
+  overflow: visible !important;
+  margin-left: -1%;
+}
+/* card collection style */
+.collection .collection-item {
+  background-color: #253237;
+}
 
+
+/* pallete stuff */
 .floralWhite {
   background-color: #FFFCF2;
 }
