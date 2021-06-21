@@ -5,9 +5,7 @@ const sequelize = require('../db')
 const User = pls.defineUser(sequelize, {
   // your columns here...
   name: DataTypes.STRING,
-  email: DataTypes.STRING,
-  user_comment: DataTypes.STRING,
-  user_list: DataTypes.ARRAY
+  email: DataTypes.STRING
 })
 
 module.exports = User
