@@ -19,13 +19,13 @@ Comment.belongsTo(User, {
 
 // a user has one list
 User.hasOne(List, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  foreignKey: 'user_id'
 })
 
 // a list belongs to one user
 List.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 })
 
 // a comic belongs to one list
