@@ -5,22 +5,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>ComicCol</title>
 </head>
 
 <body>
+  
+  <!-- nav -->
+  <nav>
+    <div class="nav-wrapper blue-grey darken-4">
+      <a href="#" class="brand-logo center">ComicCol</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <btn href="#" data-target="slide-out" class="sidenav-trigger">Menu</btn>
+        </li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>   
+  </nav>
+
+  <!-- side nav test -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/List">My List</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+ 
+  <!-- header -->
+  <header class="section no-pad-bot" id="index-banner">
+    <section class="container">
+      <h1 class="header center white-text">Comic Collection</h1>
+      <div class="row center">
+        <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5>
+      </div>
+      <br><br>
+    </section>
+  </header>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+  <!-- materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- materialize sidenav -->
   <script>
-    const API_KEY = '2981313d7d87c091040644d4cb8f4add51d0e6b1'
-    // 2981313d7d87c091040644d4cb8f4add51d0e6b1
-    // 4229da11e984979034bc2ac32c374e2590e85613
-    const query = 'x-men'
-    // https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&sort=name:asc&resources=issue&query=${query}
-    axios.get(`https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&sort=name:asc&resources=issue&query=${query}`)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err))
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+  </script>
+
+  <!-- test js -->
+  <script src="../test.js"></script>
+  <!-- our js -->
+  <script src="./assets/js/index.js"></script>
+  <script>
+    
   </script>
 
 </body>
