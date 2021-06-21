@@ -11,7 +11,7 @@ Comic.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -20,6 +20,14 @@ Comic.init(
       allowNull: false
     },
     cover_image: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    issue_number: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    cover_date: {
       type: DataTypes.STRING,
       allowNull: true
     }

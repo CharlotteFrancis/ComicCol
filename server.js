@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const { join } = require('path')
 const passport = require('passport')
-const { User } = require('./models')
+const { User, } = require('./models')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 const app = express()
 
