@@ -8,10 +8,12 @@
   <!-- materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  </style>
   <title>ComicCol</title>
 </head>
 
-<body>
+<body class="gunmetal">
   
   <!-- nav -->
   <nav>
@@ -47,18 +49,33 @@
     </section>
   </header>
 
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://comicvine.gamespot.com/a/uploads/scale_large/11/117763/2403520-ss16.png"></a>
+    <a class="carousel-item" href="#two!"><img src="https://comicvine.gamespot.com/a/uploads/scale_large/0/4/46617-3824-55260-1-wonder-woman.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="https://comicvine.gamespot.com/a/uploads/scale_large/5/56044/1973911-batman__1940__666.jpeg"></a>
+    <a class="carousel-item" href="#four!"><img src="https://comicvine.gamespot.com/a/uploads/scale_large/0/6060/171220-2127-113467-1-amazing-spider-man.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2302100-02.jpg"></a>
+  </div>
+
   <!-- materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- axios -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- materialize sidenav -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-  });
-  </script>
+      var elems = document.querySelectorAll('.sidenav')
+      var instances = M.Sidenav.init(elems)
+    });
+    </script>
+  <!-- materialize carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.carousel')
+      var instances = M.Carousel.init(elems)
+    });
+    </script>
 
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- test js -->
   <script src="../test.js"></script>
   <!-- our js -->
