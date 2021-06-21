@@ -11,15 +11,18 @@
 <body>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <script>
-    const API_KEY = '4229da11e984979034bc2ac32c374e2590e85613'
+    const API_KEY = '2981313d7d87c091040644d4cb8f4add51d0e6b1'
+    // 2981313d7d87c091040644d4cb8f4add51d0e6b1
+    // 4229da11e984979034bc2ac32c374e2590e85613
     const query = 'x-men'
     // https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&sort=name:asc&resources=issue&query=${query}
     axios.get(`https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&sort=name:asc&resources=issue&query=${query}`)
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
   </script>
+
 </body>
 
 </html>
