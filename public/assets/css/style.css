@@ -73,23 +73,46 @@
   background-color: #5c6b73 !important;
 } */
 .colorBorder {
-  border-radius: 2px;
-  border-color: #e0fbfc;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+.remove-bottom-margin {
+  margin-bottom: 0px;
+}
+.list-border {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #fff;
+}
 th {
+  /* background-color: #243447; */
   font-weight: 300;
   font-size: large;
   color: #fff !important;
 }
 td {
-  font-weight: 100;
+  /* font-weight: 100; */
   color: #fff !important;
+  padding: 5px;
 }
-
+.list-cover {
+  height: 90px;
+  width: 60px;
+}
+.list-collection {
+  margin-bottom: 0;
+}
+/* table stripes color */
+table.striped>tbody>tr:nth-child(odd) {
+  background-color: rgb(0 0 0 / 50%);
+}
+/* END LIST STUFF */
 /* pallete stuff */
 
 .floralWhite {
