@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 document.getElementById('submitLogIn').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/users/login', {
@@ -9,7 +7,7 @@ document.getElementById('submitLogIn').addEventListener('click', event => {
   .then(({data: token}) => {
     if (token) {
       localStorage.setItem('token', token)
-      window.location = '/'
+      window.location = '/index.html'
     }
     else {
       alert('Invalid username or password')

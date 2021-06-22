@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 document.getElementById('createAccount').addEventListener('click', event => {
   event.preventDefault()
   axios.post('api/users/register', {

@@ -4,7 +4,6 @@ const sequelize = require('../db')
 
 const User = pls.defineUser(sequelize, {
   // your columns here...
-  name: DataTypes.STRING,
   email: DataTypes.STRING
 })
 
