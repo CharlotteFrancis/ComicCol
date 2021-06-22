@@ -1,11 +1,19 @@
-
 /* MAIN STUFF */
+
+/* nav bar */
+.inv {
+  display: none;
+}
+
 /* header */
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
+
 /* footer */
+
 /* header */
+
 #footer-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
 }
@@ -15,28 +23,37 @@
 }
 
 /* carousel */
+
 .carousel .carousel-item {
-/* add sizing here with !important */
-width: 20% !important;
-height: 70% !important;
+  /* add sizing here with !important */
+  width: 20% !important;
+  height: 70% !important;
 }
+
 /* overflow visible to remove cutoff */
+
 .carousel {
   overflow: visible !important;
   margin-left: -1%;
 }
+
 /* card collection style */
+
 .collection .collection-item {
   background-color: #253237;
 }
+
 /* footer color */
+
 .footerColor {
   background-color: #243447;
 }
+
 /* END MAIN STUFF */
 
 /* AUTH STUFF */
 /* Small text */
+
 .tiny-text {
   font-size: small;
   text-align: center;
@@ -58,9 +75,9 @@ height: 70% !important;
 .colorBorder {
   border-color: e0fbfc;
 }
-/* END LIST STUFF */
 
 /* pallete stuff */
+
 .floralWhite {
   background-color: #FFFCF2;
 }
@@ -82,6 +99,7 @@ height: 70% !important;
 }
 
 /* blue-grey darken-4 */
+
 .gunmetal {
   background-color: #253237;
 }
