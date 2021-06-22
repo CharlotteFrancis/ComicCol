@@ -13,7 +13,6 @@
 /* footer */
 
 /* header */
-
 #footer-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
 }
@@ -23,7 +22,6 @@
 }
 
 /* carousel */
-
 .carousel .carousel-item {
   /* add sizing here with !important */
   width: 20% !important;
@@ -38,13 +36,11 @@
 }
 
 /* card collection style */
-
 .collection .collection-item {
   background-color: #253237;
 }
 
 /* footer color */
-
 .footerColor {
   background-color: #243447;
 }
@@ -53,11 +49,11 @@
 
 /* AUTH STUFF */
 /* Small text */
-
 .tiny-text {
   font-size: small;
   text-align: center;
 }
+
 /* Styling on Auth containers */
 .rounded-corners {
   border-radius: 5px;
@@ -69,9 +65,6 @@
 /* END AUTH STUFF */
 
 /* LIST STUFF */
-/* .list-title {
-  background-color: #5c6b73 !important;
-} */
 .colorBorder {
   border-style: solid;
   border-width: 1px;
@@ -81,39 +74,57 @@
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
 .remove-bottom-margin {
   margin-bottom: 0px;
 }
+
 .list-border {
   border-left: 1px solid;
   border-right: 1px solid;
   border-bottom: 1px solid;
   border-color: #fff;
 }
+
 th {
   /* background-color: #243447; */
   font-weight: 300;
   font-size: large;
   color: #fff !important;
 }
+
 td {
   /* font-weight: 100; */
   color: #fff !important;
   padding: 5px;
 }
+
 .list-cover {
   height: 90px;
   width: 60px;
 }
+
 .list-collection {
   margin-bottom: 0;
 }
+
 /* table stripes color */
 table.striped>tbody>tr:nth-child(odd) {
   background-color: rgb(0 0 0 / 50%);
 }
 /* END LIST STUFF */
-/* pallete stuff */
+
+/* SEARCH STUFF */
+.small-text {
+  font-size: small;
+}
+
+.search-card-height {
+  height: 325px;
+}
+/* END SEARCH STUFF */
+
+/* PALLETE STUFF */
 
 .floralWhite {
   background-color: #FFFCF2;
