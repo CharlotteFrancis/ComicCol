@@ -82,7 +82,7 @@
   <!-- username text input id: 'username' -->
   <!-- password text input id: 'password' -->
   <!-- login button id: 'submitLogIn' => should create a post request for user authentication to recieve jwt -->
-  <!-- sign up button id: 'submitSignUp' => should redirect to /register -->
+  <!-- sign up button id: 'submitSignUp' => should redirect to /register DONE -->
   <!-- make sure you use ./public/js/login.js -->
   <br>
   <!-- CONTENT -->
@@ -126,7 +126,7 @@
                   <!-- buttons go here -->
                   <p><button id="submitLogIn" class="btn-large waves-effect waves-light cadet rounded-corners">Log In</button></p>
                   <br><br>
-                  <p><button id="submitSignUp" class="btn waves-effect waves-light blue-grey darken-4 rounded-corners">Sign Up</button></p>
+                  <p><a href="register.html" id="submitSignUp" class="btn waves-effect waves-light blue-grey darken-4 rounded-corners">Sign Up</a></p>
                 </div>
               </form>
               <!-- END OF FORM -->
@@ -194,14 +194,14 @@
       var elems = document.querySelectorAll('.sidenav')
       var instances = M.Sidenav.init(elems)
     });
-    </script>
+  </script>
   <!-- materialize carousel -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.carousel')
       var instances = M.Carousel.init(elems)
     });
-    </script>
+  </script>
   <!-- materialize parallax -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -210,6 +210,8 @@
     });
   </script>
 
+  <!-- gitHub button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- our js -->

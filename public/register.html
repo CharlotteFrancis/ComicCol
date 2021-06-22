@@ -85,7 +85,7 @@
   <!-- username text input id: 'username' -->
   <!-- password text input id: 'password' -->
   <!-- create account button id: 'createAccount' => should do a post request for new user and then redirect to /login -->
-  <!-- sign in button id: 'signIn' => should direct to /login -->
+  <!-- sign in button id: 'signIn' => should direct to /login DONE-->
   <!-- make sure you use ./public/js/register.js -->
   <main class="container">
     <div class="row">
@@ -127,7 +127,7 @@
                   <!-- buttons go here -->
                   <p><button id="createAccount" class="btn-large waves-effect waves-light cadet rounded-corners">Create Account</button></p>
                   <br><br>
-                  <p><button id="signIn" class="btn waves-effect waves-light blue-grey darken-4 rounded-corners">Sign In</button></p>
+                  <p><a href='login.html' id="signIn" class="btn waves-effect waves-light blue-grey darken-4 rounded-corners">Sign In</a></p>
                 </div>
               </form>
               <!-- END OF FORM -->
@@ -211,6 +211,8 @@
     });
   </script>
 
+  <!-- gitHub button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- our js -->
