@@ -4,6 +4,11 @@
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
+/* footer */
+/* header */
+#footer-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
+}
 /* carousel */
 .carousel .carousel-item {
 /* add sizing here with !important */
