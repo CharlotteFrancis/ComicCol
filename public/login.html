@@ -71,67 +71,75 @@
     <section class="container">
       <h1 class="header center white-text">Comic Collection</h1>
       <div class="row center">
-        <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5>
+        <h5 class="header col s12 light white-text">Log in to manage your comic collection!</h5>
       </div>
       <br><br>
     </section>
   </header>
 
-  <!-- carousel, in the future adjust this so its dynamically populated with JavaScript -->
-  <div class="carousel">
-    <!-- card 1 -->
-    <div class="carousel-item card">
-      <div class="card-image">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_large/11/117763/2403520-ss16.png">
-      </div>
-      <div class="collection">
-        <a class="collection-item center white-text" href="#">View Details</a>
-      </div>
-    </div>
-    <!-- card 2 -->
-    <div class="carousel-item card">
-      <div class="card-image">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_large/0/4/46617-3824-55260-1-wonder-woman.jpg">
-      </div>
-      <div class="collection">
-        <a class="collection-item center white-text" href="#">View Details</a>
-      </div>
-    </div>
-    <!-- card 3 -->
-    <div class="carousel-item card">
-      <div class="card-image">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_large/5/56044/1973911-batman__1940__666.jpeg">
-      </div>
-      <div class="collection">
-        <a class="collection-item center white-text" href="#">View Details</a>
-      </div>
-    </div>
-    <!-- card 4 -->
-    <div class="carousel-item card">
-      <div class="card-image">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_large/0/6060/171220-2127-113467-1-amazing-spider-man.jpg">
-      </div>
-      <div class="collection">
-        <a class="collection-item center white-text" href="#">View Details</a>
-      </div>
-    </div>
-    <!-- card 5 -->
-    <div class="carousel-item card">
-      <div class="card-image">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2302100-02.jpg">
-      </div>
-      <div class="collection">
-        <a class="collection-item center white-text" href="#">View Details</a>
-      </div>
-    </div>
 
-  </div>
-  <br><br>
+  <!-- TLDR:  -->
+  <!-- username text input id: 'username' -->
+  <!-- password text input id: 'password' -->
+  <!-- login button id: 'submitLogIn' => should create a post request for user authentication to recieve jwt -->
+  <!-- sign up button id: 'submitSignUp' => should redirect to /register -->
+  <!-- make sure you use ./public/js/login.js -->
+  <br>
+  <!-- CONTENT -->
+  <main class="container">
+    <div class="row">
+      <!-- padding div -->
+      <div class="col s2"></div>
+      <div class="col s8">
+        <div id="authContainer" class="container">
+          <!-- LOGIN CARD -->
+          <div class="card blue-grey darken-3 rounded-corners">
+            <div class="card-content white-text">
+              <span class="card-title center">Log In</span>
 
-  <!-- padding ? -->
-  <div class="container">
-    <div style="margin-top: 22%;"></div>
-  </div>
+              <!-- LOGIN FORM -->
+              <form>
+                <!-- USERNAME -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="username" type="text" class="validate">
+                    <label for="username">Username</label>
+                  </div>
+                </div>
+                <!-- password -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- padding div -->
+                  <div class="col s2"></div>
+                  <div class="col s8">
+                    <p class = "tiny-text">Beware of phishing sites pretending to be ComicCol. Always check before entering your password.</p>
+                  </div>
+                  <div class="col s2"></div>
+                </div>
+                <br>
+                <div class="card-action center">
+                  <!-- buttons go here -->
+                  <p><button id="submitLogIn" class="btn-large waves-effect waves-light cadet rounded-corners">Log In</button></p>
+                  <br><br>
+                  <p><button id="submitSignUp" class="btn waves-effect waves-light blue-grey darken-4 rounded-corners">Sign Up</button></p>
+                </div>
+              </form>
+              <!-- END OF FORM -->
+
+            </div>
+          </div>
+          <!-- END LOGIN CARD -->
+        </div>
+      </div>
+      <!-- padding div -->
+      <div class="col s2"></div>
+    </div>
+  </main>
 
 
   <!-- parallax + footer -->
@@ -203,10 +211,8 @@
 
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <!-- test js -->
-  <script src="../test.js"></script>
   <!-- our js -->
-  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/login.js"></script>
   <script>
 
   </script>
