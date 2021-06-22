@@ -28,29 +28,29 @@ List.belongsTo(User, {
   onDelete: 'CASCADE'
 })
 
-// a comic belongs to one list
-Comic.belongsTo(List, {
-  foreignKey: 'list_id'
+// a comic belongs to many lists
+Comic.belongsToMany(List, {
+  through: ComicList,
+  foreignKey: 'comic_id',
+  otherKey: 'list_id'
 })
 
-// a list has many comics
-List.hasMany(Comic, {
+// a list has many comics, we use belongsToMany here because of the many to many association
+List.belongsToMany(Comic, {
+  through: ComicList,
   foreignKey: 'list_id',
-  onDelete: 'CASCADE'
+  otherKey: 'comic_id'
 })
 
-// // a comic belongs to many lists
-// Comic.belongsToMany(List, {
-//   through: ComicList,
-//   foreignKey: 'comic_id',
-//   otherKey: 'list_id'
+// // a comic belongs to one list
+// Comic.belongsTo(List, {
+//   foreignKey: 'list_id'
 // })
 
-// // a list has many comics, we use belongsToMany here because of the many to many association
-// List.belongsToMany(Comic, {
-//   through: ComicList,
+// // a list has many comics
+// List.hasMany(Comic, {
 //   foreignKey: 'list_id',
-//   otherKey: 'comic_id'
+//   onDelete: 'CASCADE'
 // })
 
 module.exports = { User, Comic, ComicList, List, Comment }
