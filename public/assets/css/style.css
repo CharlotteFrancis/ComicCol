@@ -52,16 +52,13 @@
 /* END MAIN STUFF */
 
 /* AUTH STUFF */
-
-/* #authContainer {
-  height: 100%;
-} */
+/* Small text */
 
 .tiny-text {
   font-size: small;
   text-align: center;
 }
-
+/* Styling on Auth containers */
 .rounded-corners {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -69,8 +66,15 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-
 /* END AUTH STUFF */
+
+/* LIST STUFF */
+/* .list-title {
+  background-color: #5c6b73 !important;
+} */
+.colorBorder {
+  border-color: e0fbfc;
+}
 
 /* pallete stuff */
 
@@ -105,5 +109,5 @@
 }
 
 .textWhite {
-  color: #FFFCF2;
+  color: #FFFCF2 !important;
 }
