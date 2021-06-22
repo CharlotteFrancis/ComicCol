@@ -63,6 +63,15 @@ height: 70% !important;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+th {
+  font-weight: 300;
+  font-size: large;
+  color: #fff !important;
+}
+td {
+  font-weight: 100;
+  color: #fff !important;
+}
 /* END LIST STUFF */
 
 /* pallete stuff */
