@@ -9,6 +9,11 @@
 #footer-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
 }
+
+.inline {
+  display: inline;
+}
+
 /* carousel */
 .carousel .carousel-item {
 /* add sizing here with !important */
