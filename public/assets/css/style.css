@@ -1,7 +1,19 @@
+
+/* MAIN STUFF */
 /* header */
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
+/* footer */
+/* header */
+#footer-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
+}
+
+.inline {
+  display: inline;
+}
+
 /* carousel */
 .carousel .carousel-item {
 /* add sizing here with !important */
@@ -17,6 +29,29 @@ height: 70% !important;
 .collection .collection-item {
   background-color: #253237;
 }
+/* footer color */
+.footerColor {
+  background-color: #243447;
+}
+/* END MAIN STUFF */
+
+/* AUTH STUFF */
+/* #authContainer {
+  height: 100%;
+} */
+.tiny-text {
+  font-size: small;
+  text-align: center;
+}
+
+.rounded-corners {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/* END AUTH STUFF */
 
 
 /* pallete stuff */
