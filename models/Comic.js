@@ -25,7 +25,11 @@ Comic.init(
     },
     issue_number: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    issue_name: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     cover_date: {
       type: DataTypes.STRING,
