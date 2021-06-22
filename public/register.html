@@ -83,6 +83,7 @@
 
   <!-- TLDR:  -->
   <!-- username text input id: 'username' -->
+  <!-- email text input id: 'email' -->
   <!-- password text input id: 'password' -->
   <!-- create account button id: 'createAccount' => should do a post request for new user and then redirect to /login -->
   <!-- sign in button id: 'signIn' => should direct to /login DONE-->
@@ -103,14 +104,21 @@
                 <!-- USERNAME -->
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="username" type="text" class="validate">
+                    <input id="username" type="text" class="validate textWhite">
                     <label for="username">Username</label>
+                  </div>
+                </div>
+                <!-- EMAIL -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate textWhite">
+                    <label for="email">Email</label>
                   </div>
                 </div>
                 <!-- password -->
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" type="password" class="validate textWhite">
                     <label for="password">Password</label>
                   </div>
                 </div>
