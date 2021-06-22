@@ -68,7 +68,7 @@
     <li><a href="/mylist.html">My List</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">We can put extra stuff we add here</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li><a class="waves-effect" href="/search.html">Search</a></li>
     <li><a class="waves-effect" href="#!">Fourth Link With Waves</a></li>
   </ul>
  
@@ -78,18 +78,290 @@
     <section class="container">
       <h1 class="header center white-text">Comic Collection</h1>
       <div class="row center">
-        <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5>
+        <h5 class="header col s12 light white-text">Search comics for your catalog</h5>
       </div>
       <br><br>
     </section>
   </header>
 
+  <!-- TLDR: -->
+  <!-- SEARCHBAR INPUT ID: 'comicSearch' -->
+  <!-- SEARCHBAR BUTTON ID: 'searchSubmit' -->
+  <!-- COMIC CONTAINER ID: 'comicResults' -->
 
   <!-- CONTENT -->
-  <!-- NEED A SEARCH BAR -->
-  <!-- BOX TO RENDER SEARCH RESULTS -->
-  <!-- FOR REFERENCE CHECK OUT THE ANIME WATCHLIST RENDER THING QUINTON MADE A WHILE AGO, I FORGOT THE DATE--> -->
+  <!-- FOR REFERENCE CHECK OUT THE ANIME WATCHLIST RENDER THING QUINTON MADE A WHILE AGO, I FORGOT THE DATE-->
 
+  <!-- SEARCH container -->
+  <main class="container"> 
+    <div><h5 class="white-text">Comic Search</h5></div>
+    <p class="white-text small-text"><a class="white-text small-text" href="./index.html"> Top</a> > Search</p>
+    <br><hr><br>
+
+    <!-- SEARCH BAR container -->
+    <div class="container centered">
+      <form>
+        <div class="input-field col s12">
+          <textarea id="comicSearch" class="materialize-textarea" placeholder=" Search for comics"></textarea>
+          <button id="searchSubmit" class="btn waves-effect waves-light blue-grey darken-2 rounded-corners"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <br>
+    <p class="white-text remove-bottom-margin">Search Results</p>
+    <hr>
+
+    <!-- RENDER SEARCH RESULTS HERE -->
+    <div class="row comicResults">
+
+      <!-- cards here -->
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5712144-15.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Scarlet Witch</h6>
+              <hr>
+              <p>Issue: 15</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354933-04.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Thor</h6>
+              <hr>
+              <p>Issue: 4</p>
+              <p>Thor Vs. Thor</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7607019-49.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>The Amazing Spider-Man</h6>
+              <hr>
+              <p>Issue: 49</p>
+              <p>The Green Goblin Is Back</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6352628-25.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Invincible: The End of All Things</h6>
+              <hr>
+              <p>Issue: 2</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- cards here -->
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5712144-15.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Scarlet Witch</h6>
+              <hr>
+              <p>Issue: 15</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354933-04.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Thor</h6>
+              <hr>
+              <p>Issue: 4</p>
+              <p>Thor Vs. Thor</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7607019-49.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>The Amazing Spider-Man</h6>
+              <hr>
+              <p>Issue: 49</p>
+              <p>The Green Goblin Is Back</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6352628-25.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Invincible: The End of All Things</h6>
+              <hr>
+              <p>Issue: 2</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- cards here -->
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5712144-15.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Scarlet Witch</h6>
+              <hr>
+              <p>Issue: 15</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354933-04.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Thor</h6>
+              <hr>
+              <p>Issue: 4</p>
+              <p>Thor Vs. Thor</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7607019-49.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>The Amazing Spider-Man</h6>
+              <hr>
+              <p>Issue: 49</p>
+              <p>The Green Goblin Is Back</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6352628-25.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Invincible: The End of All Things</h6>
+              <hr>
+              <p>Issue: 2</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- END OF CARD RENDERS -->
+  </main>
 
   <!-- parallax + footer -->
   <div class="parallax-container">
@@ -200,8 +472,7 @@
   <!-- test js -->
   <script src="../test.js"></script>
   <!-- our js -->
-  <script src="./assets/js/index.js"></script>
-
+  <script src="./assets/js/search.js"></script>
   <!-- navbar js -->
   <script src="assets/js/navbar.js"></script>
   <script>
