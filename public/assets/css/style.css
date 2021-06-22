@@ -36,14 +36,12 @@ height: 70% !important;
 /* END MAIN STUFF */
 
 /* AUTH STUFF */
-/* #authContainer {
-  height: 100%;
-} */
+/* Small text */
 .tiny-text {
   font-size: small;
   text-align: center;
 }
-
+/* Styling on Auth containers */
 .rounded-corners {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -53,6 +51,14 @@ height: 70% !important;
 }
 /* END AUTH STUFF */
 
+/* LIST STUFF */
+/* .list-title {
+  background-color: #5c6b73 !important;
+} */
+.colorBorder {
+  border-color: e0fbfc;
+}
+/* END LIST STUFF */
 
 /* pallete stuff */
 .floralWhite {
@@ -85,5 +91,5 @@ height: 70% !important;
 }
 
 .textWhite {
-  color: #FFFCF2;
+  color: #FFFCF2 !important;
 }
