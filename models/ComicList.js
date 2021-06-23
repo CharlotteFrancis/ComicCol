@@ -14,6 +14,10 @@ ComicList.init(
     rating: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    completion_status: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

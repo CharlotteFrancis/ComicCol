@@ -17,11 +17,15 @@ Comic.init(
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: true
+    },
+    is_done: {
+      type: DataTypes.STRING
       allowNull: false
     },
     cover_image: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     },
     issue_number: {
       type: DataTypes.STRING,

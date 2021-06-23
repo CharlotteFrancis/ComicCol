@@ -1,7 +1,22 @@
 const router = require('express').Router()
-const { User } = require('../models')
+const { User, List, ComicList } = require('../models')
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
+
+// get the current user's id
+router.get('/users/getID', passport.authenticate('jwt'), (req, res) => {
+  res.json(req.user.id)
+})
+
+// finds one user by their id
+router.get('/users/:id', (req, res) => {
+  User.findOne({
+    where: { id: req.params.id },
+    include: [ {model: List}, {model: ComicList} ]
+  })
+  .then(user => res.json(user))
+  .catch(err => console.log(err))
+})
 
 router.post('/users/register', (req, res) => {
   const { username, email } = req.body
