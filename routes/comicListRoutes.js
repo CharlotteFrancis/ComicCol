@@ -9,7 +9,6 @@ router.get('/comiclist', passport.authenticate('jwt'), (req, res) => {
 router.post('/comiclist', passport.authenticate('jwt'), (req, res) => ComicList.create({
   rating: req.body.rating,
   completion_status: req.body.completion_status,
-  isDone: req.body.isDone,
   uid: req.user.id
 })
   .then(comiclist => res.json(comiclist))
