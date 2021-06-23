@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  </style>
+  <title>ComicCol</title>
+</head>
+
+<body class="gunmetal">
+
+  <!-- nav -->
+  <nav>
+    <div class="nav-wrapper blue-grey darken-4">
+      <a href="#" class="brand-logo center">ComicCol</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <btn href="#" data-target="slide-out" class="sidenav-trigger">Menu</btn>
+        </li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/mylist.html">My List</a></li>
+        <!-- SEARCH BAR IS HERE -->
+        <li>
+          <div class="center row">
+            <div class="col s12">
+              <div class="row" id="topbarsearch">
+                <div class="input-field col s12 white-text ">
+                  <!-- SEARCH BAR ID: 'search' -->
+                  <input type="text" placeholder=" Search" id="search" class="autocomplete white-text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- BUTTON IS HERE, SEACRCH BUTTON ID: 'submit' -->
+        <li>
+          <button id="submit" class="btn waves-effect waves-light blue-grey darken-2">go</button>
+        </li>
+        <!-- END OF SEARCH BAR LI -->
+      </ul>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down login-logout">
+        <!-- change log in or log out based on user status -->
+        <!-- LOGIN BUTTON ID: 'login' -->
+        <li>
+          <div class="inv">
+            <a id="login" href="login.html">Log In</a>
+          </div>
+          <div class="inv">
+            <a id="logout" href=".html">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/mylist.html">My List</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">We can put extra stuff we add here</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li><a class="waves-effect" href="#!">Fourth Link With Waves</a></li>
+  </ul>
+
+  <!-- container for comic info and comments -->
+  <div class="container">
+    <div class="col s12 m7">
+      <div class="row center">
+        <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5>
+      </div>
+
+      <!-- card for comic info -->
+      <div class="card horizontal rounded-corners">
+        <div class="card-image">
+          <img class="materialboxed" src="https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6686014-07.jpg">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h2>Thor #7</h2>
+            <h3>Young Thor's Lament</h3>
+            <h4>Cover Date: 2019-01-01</h4>
+            <h4>Average Rating: X/10</h4>
+            <h5>Description</h5>
+            <p><em>A TALE OF YOUNG THOR FROM THE VIKING AGE!</em></p>
+            <p><em>Every time Thor comes to Midgard, he gets all the mead, battle and romance a young god could possibly want. But he still can't figure out how to prove himself worthy of Mjolnir. And now Odin is determined to keep his son away from Midgard for good. And young Loki knows just the way to do it.</em></p>
+          </div>
+          <div class="card-action">
+            <p class="right">Add to your collection</p>
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review section -->
+      <h3 class="center white-text">User Reviews</h3>
+      <!-- card for comment elem -->
+        <div class="row">
+          <div class="col m4">
+            <div class="card blue-grey darken-1 comment-card">
+              <div class="card-content white-text">
+                <span class="card-title">The Witch is Back!</span>
+                <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="col m4">
+            <div class="card blue-grey darken-1 comment-card">
+              <div class="card-content white-text">
+                <span class="card-title">The Witch is Back!</span>
+                <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an
+                  interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working
+                  Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m4">
+            <div class="card blue-grey darken-1 comment-card">
+              <div class="card-content white-text">
+                <span class="card-title">The Witch is Back!</span>
+                <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an
+                  interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working
+                  Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m4">
+            <div class="card blue-grey darken-1 comment-card">
+              <div class="card-content white-text">
+                <span class="card-title">The Witch is Back!</span>
+                <p>This issue carries on directly...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- footer -->
+  <div class="section footerColor" style="padding-top: 2%;">
+    <div class="row container">
+      <!-- padding div -->
+      <div class="col s1"></div>
+      <!-- contact stuff! -->
+      <div class="col s3">
+        <h5 class="white-text my-h5">Connect with us:</h5>
+        <p class="white-text">Get to know our devs a little better!</p>
+      </div>
+      <div class="col s1">
+        <h5 class="white-text my-h5">GitHub:</h5>
+        <p>
+          <a href="https://github.com/CharlotteFrancis" class="white-text"
+            style="text-decoration: underline;">Charlotte</a>
+        </p>
+        <p>
+          <a href="https://github.com/alwayssmellitfirst" class="white-text"
+            style="text-decoration: underline;">Jacob</a>
+        </p>
+        <p>
+          <a href="https://github.com/DeviantSchemist" class="white-text"
+            style="text-decoration: underline;">Michael</a>
+        </p>
+        <p>
+          <a href="https://github.com/bronsonsoda" class="white-text" style="text-decoration: underline;">Bronson</a>
+        </p>
+      </div>
+      <div class="col s2">
+        <!-- DO NOT FIX THIS h5 TAG IT HAS AN INVISIBLE ASCII CHARACTER IN IT, ITS INTENTIONAL -->
+        <h5 class="white-text my-h5">‌‌
+        </h5>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis"> Follow @CharlotteFrancis</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/alwayssmellitfirst"> Follow @alwayssmellitfirst</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/DeviantSchemist"> Follow @DeviantSchemist</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/bronsonsoda"> Follow @bronsonsoda</a>
+        </p>
+      </div>
+      <div class="col s2">
+        <h5 class="white-text my-h5">LinkedIn:</h5>
+        <p class="white-text" style="text-decoration: underline;">test</p>
+        <p class="white-text" style="text-decoration: underline;">test</p>
+        <p class="white-text" style="text-decoration: underline;">test</p>
+        <p class="white-text" style="text-decoration: underline;">test</p>
+      </div>
+      <div class="col s2">
+        <h5 class="white-text my-h5">Cool links:</h5>
+        <p>
+          <a href="https://github.com/CharlotteFrancis/ComicCol" class="white-text"
+            style="text-decoration: underline;">GitHub Repository</a>
+        </p>
+        <p>
+          <a href="https://comicvine.gamespot.com/" class="white-text" style="text-decoration: underline;">ComicVine</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol" data-icon="octicon-star"
+            aria-label="Star CharlotteFrancis/ComicCol on GitHub">Star</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol/subscription"
+            data-icon="octicon-eye" aria-label="Watch CharlotteFrancis/ComicCol on GitHub">Watch</a>
+        </p>
+      </div>
+      <!-- padding div -->
+      <div class="col s1"></div>
+    </div>
+    <br>
+    <hr>
+    <div class="row container">
+      <br>
+      <!-- padding div -->
+      <div class="col s1"></div>
+      <div class="col s11">
+        <p class="white-text">© 2021 Project 2 Group</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- materialize sidenav -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav')
+      var instances = M.Sidenav.init(elems)
+    });
+  </script>
+  <!-- materialize carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.carousel')
+      var instances = M.Carousel.init(elems)
+    });
+  </script>
+  <!-- materialize parallax -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.parallax');
+      var instances = M.Parallax.init(elems, {});
+    });
+  </script>
+
+  <!-- materialize Material Box -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var elems = document.querySelectorAll('.materialboxed');
+          var instances = M.Materialbox.init(elems);
+        });
+  </script>
+
+  <!-- gitHub button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- test js -->
+  <script src="../test.js"></script>
+  <!-- our js -->
+  <script src="./assets/js/index.js"></script>
+
+  <!-- navbar js -->
+  <script src="assets/js/navbar.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

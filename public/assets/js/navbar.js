@@ -11,12 +11,11 @@
 //   })
 // })
 
-  if (localStorage.getItem('token') === true) {
-    document.getElementById('logout').parentElement.className = ''
-  } else {
-    document.getElementById('login').parentElement.className = ''
-  }
-
+if (localStorage.getItem('token')) {
+  document.getElementById('logout').parentElement.className = ''
+} else {
+  document.getElementById('login').parentElement.className = ''
+}
 
 document.getElementById('logout').addEventListener('click', event => {
   localStorage.removeItem('token')

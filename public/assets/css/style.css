@@ -1,11 +1,19 @@
 /* MAIN STUFF */
-
+/* modal */
+.my-modal {
+  overflow-y: hidden;
+}
+.modal-image-height {
+  height: 450px;
+}
 /* nav bar */
+
 .inv {
   display: none;
 }
 
 /* header */
+
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
@@ -48,6 +56,7 @@
 /* END MAIN STUFF */
 
 /* AUTH STUFF */
+
 /* Small text */
 .tiny-text {
   font-size: small;
@@ -55,6 +64,7 @@
 }
 
 /* Styling on Auth containers */
+
 .rounded-corners {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -62,6 +72,7 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 /* END AUTH STUFF */
 
 /* LIST STUFF */
@@ -77,6 +88,9 @@
 
 .remove-bottom-margin {
   margin-bottom: 0px;
+}
+.remove-top-margin {
+  margin-top: 0px;
 }
 
 .list-border {
@@ -118,9 +132,10 @@ table.striped>tbody>tr:nth-child(odd) {
 .small-text {
   font-size: small;
 }
-
 .search-card-height {
   height: 325px;
+}.search-card-width {
+  height: 375px;
 }
 /* END SEARCH STUFF */
 
@@ -158,4 +173,8 @@ table.striped>tbody>tr:nth-child(odd) {
 
 .textWhite {
   color: #FFFCF2 !important;
+}
+
+.card-content p {
+  font-size: 1vw;
 }
