@@ -1,5 +1,11 @@
 /* MAIN STUFF */
-
+/* modal */
+.my-modal {
+  overflow-y: hidden;
+}
+.modal-image-height {
+  height: 450px;
+}
 /* nav bar */
 .inv {
   display: none;
@@ -78,6 +84,9 @@
 .remove-bottom-margin {
   margin-bottom: 0px;
 }
+.remove-top-margin {
+  margin-top: 0px;
+}
 
 .list-border {
   border-left: 1px solid;
@@ -118,7 +127,6 @@ table.striped>tbody>tr:nth-child(odd) {
 .small-text {
   font-size: small;
 }
-
 .search-card-height {
   height: 325px;
 }
