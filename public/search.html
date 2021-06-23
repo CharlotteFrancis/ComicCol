@@ -205,6 +205,54 @@
 
     </div>
     <!-- END OF CARD RENDERS -->
+    <!-- MODAL -->
+    <div id="modal1" class="modal" style="width: 30%; overflow: visible;">
+      <div class="modal-content">
+        <h6 id="modalTitle"></h6>
+        <hr style="width: 35%;" class="left">
+        <p style="font-size: smaller; display: inline;">Issue: </p>
+        <p style="display: inline; font-size:small">·</p>
+        <p id="modalIssueName" style="font-size: smaller; display: inline;">06-23-2021</p>
+        <br>
+        <blockquote style="border-color: darkgray; margin-bottom: 5px;">
+          <!-- <br> -->
+          <!-- RATING -->
+          <p style="font-size: small; text-align: left;">
+             Rating: <div class="input-field inline">
+               <select>
+                <option value="" disabled selected>Rating</option>
+                <option value="10">(10) Perfect</option>
+                <option value="9">(9) Amazing</option>
+                <option value="8">(8) Great</option>
+                <option value="7">(7) Good</option>
+                <option value="6">(6) Fine</option>
+                <option value="5">(5) Average</option>
+                <option value="4">(4) Bad</option>
+                <option value="3">(3) Awful</option>
+                <option value="2">(2) Appaling</option>
+                <option value="1">(1) Litteral Dog Water</option>
+              </select> 
+            </div>
+          </p>
+          <!-- COMPLETION STATUS -->
+          <p style="font-size: small; text-align: left;">
+             Read Status: <div class="input-field inline">
+               <select>
+                <option value="" disabled selected>Read Status</option>
+                <option value="1">Completed</option>
+                <option value="2">Currently Reading</option>
+                <option value="3">Plan to Read</option>
+              </select> 
+            </div>
+          </p>
+          <!-- <br> -->
+        </blockquote>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Add Comic</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
   </main>
 
   <!-- parallax + footer -->
@@ -314,6 +362,13 @@
     var elems = document.querySelectorAll('.modal')
     var instances = M.Modal.init(elems)
   })
+  </script>
+  <!-- materialize select -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
   </script>
 
   <!-- gitHub button -->

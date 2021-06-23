@@ -20,7 +20,7 @@ Comic.init(
       allowNull: true
     },
     is_done: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
       allowNull: false
     },
     cover_image: {
