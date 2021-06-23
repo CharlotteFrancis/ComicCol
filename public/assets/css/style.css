@@ -1,11 +1,13 @@
 /* MAIN STUFF */
 
 /* nav bar */
+
 .inv {
   display: none;
 }
 
 /* header */
+
 #index-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header.jpg");
 }
@@ -52,13 +54,16 @@
 /* END MAIN STUFF */
 
 /* AUTH STUFF */
+
 /* Small text */
 
 .tiny-text {
   font-size: small;
   text-align: center;
 }
+
 /* Styling on Auth containers */
+
 .rounded-corners {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -66,12 +71,15 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 /* END AUTH STUFF */
 
 /* LIST STUFF */
+
 /* .list-title {
   background-color: #5c6b73 !important;
 } */
+
 .colorBorder {
   border-radius: 2px;
   border-color: #e0fbfc;
@@ -80,11 +88,13 @@
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
 th {
   font-weight: 300;
   font-size: large;
   color: #fff !important;
 }
+
 td {
   font-weight: 100;
   color: #fff !important;
@@ -125,3 +135,12 @@ td {
 .textWhite {
   color: #FFFCF2 !important;
 }
+
+.card-content p {
+  font-size: 1vw;
+}
+
+/* .comment-card {
+  float: left;
+  width: 50%
+} */
