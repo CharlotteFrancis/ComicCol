@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  </style>
+  <title>ComicCol</title>
+</head>
+
+<body class="gunmetal">
+  
+  <!-- nav -->
+  <nav>
+    <div class="nav-wrapper blue-grey darken-4">
+      <a href="#" class="brand-logo center">ComicCol</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <btn href="#" data-target="slide-out" class="sidenav-trigger">Menu</btn>
+        </li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/mylist.html">My List</a></li>
+        <!-- SEARCH BAR IS HERE -->
+        <li>    
+          <div class="center row">
+             <div class="col s12" >
+               <div class="row" id="topbarsearch">
+                 <div class="input-field col s12 white-text ">
+                   <!-- SEARCH BAR ID: 'search' -->
+                   <input type="text" placeholder=" Search" id="search" class="autocomplete white-text">
+                   </div>
+                 </div>
+               </div>
+             </div>          
+         </li> 
+         <!-- BUTTON IS HERE, SEACRCH BUTTON ID: 'submit' -->
+         <li>
+           <button id="submit" class="btn waves-effect waves-light blue-grey darken-2">go</button>
+         </li>
+         <!-- END OF SEARCH BAR LI -->
+      </ul>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down login-logout">
+        <!-- change log in or log out based on user status -->
+        <!-- LOGIN BUTTON ID: 'login' -->
+        <li>    
+          <div class="inv">
+            <a id="login" href="login.html">Log In</a>
+          </div>
+          <div class="inv">
+            <a id="logout" href=".html">Log Out</a>
+          </div>
+        </li> 
+      </ul>
+    </div>   
+  </nav>
+
+  <!-- side nav -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/mylist.html">My List</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">We can put extra stuff we add here</a></li>
+    <li><a class="waves-effect" href="/search.html">Search</a></li>
+    <li><a class="waves-effect" href="#!">Fourth Link With Waves</a></li>
+  </ul>
+ 
+  <!-- adjust header based on screen size! -->
+  <!-- header -->
+  <header class="section no-pad-bot" id="index-banner">
+    <section class="container">
+      <h1 class="header center white-text">Comic Collection</h1>
+      <div class="row center">
+        <h5 class="header col s12 light white-text">Search comics for your catalog</h5>
+      </div>
+      <br><br>
+    </section>
+  </header>
+
+  <!-- TLDR: -->
+  <!-- SEARCHBAR INPUT ID: 'comicSearch' -->
+  <!-- SEARCHBAR BUTTON ID: 'searchSubmit' -->
+  <!-- COMIC CONTAINER ID: 'comicResults' -->
+
+  <!-- CONTENT -->
+  <!-- FOR REFERENCE CHECK OUT THE ANIME WATCHLIST RENDER THING QUINTON MADE A WHILE AGO, I FORGOT THE DATE-->
+
+  <!-- SEARCH container -->
+  <main class="container"> 
+    <div><h5 class="white-text">Comic Search</h5></div>
+    <p class="white-text small-text"><a class="white-text small-text" href="./index.html"> Top</a> > Search</p>
+    <br><hr><br>
+
+    <!-- SEARCH BAR container -->
+    <div class="container centered">
+      <form>
+        <div class="row">
+          <div class="input-field col s10">
+            <textarea id="comicSearch" class="materialize-textarea white-text" placeholder=" Search for comics" style="display: inline;"></textarea>
+          </div>
+          <div class="input-field col s2">
+            <button id="searchSubmit" class="btn waves-effect waves-light blue-grey darken-2 rounded-corners" style="display: inline;"><i class="fas fa-search"></i></button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <br>
+    <p class="white-text remove-bottom-margin">Search Results</p>
+    <hr>
+
+    <!-- RENDER SEARCH RESULTS HERE -->
+    <div id="comicResults" class="row comicResults">
+
+      <!-- cards here -->
+      <div class="col s4 search-card-height search-card-width">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5712144-15.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Scarlet Witch</h6>
+              <hr>
+              <p>Issue: 15</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height search-card-width">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354933-04.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Thor</h6>
+              <hr>
+              <p>Issue: 4</p>
+              <p>Thor Vs. Thor</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height search-card-width">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7607019-49.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>The Amazing Spider-Man</h6>
+              <hr>
+              <p>Issue: 49</p>
+              <p>The Green Goblin Is Back</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 search-card-height">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6352628-25.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <br>
+              <h6>Invincible: The End of All Things</h6>
+              <hr>
+              <p>Issue: 2</p>
+              <p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Add to list</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- END OF CARD RENDERS -->
+  </main>
+
+  <!-- parallax + footer -->
+  <div class="parallax-container">
+    <div class="parallax"><img src="./assets/image/header.jpg"></div>
+  </div>
+  <div class="section footerColor" style="padding-top: 2%;">
+    <div class="row container">
+      <!-- padding div -->
+      <div class="col s1"></div>
+      <!-- contact stuff! -->
+      <div class="col s3">
+        <h5 class="white-text my-h5">Connect with us:</h5>
+        <p class = "white-text">Get to know our devs a little better!</p>
+      </div>
+      <div class="col s1">
+        <h5 class="white-text my-h5">GitHub:</h5>
+        <p>
+          <a href="https://github.com/CharlotteFrancis" class="white-text" style="text-decoration: underline;">Charlotte</a>
+        </p>
+        <p>
+          <a href="https://github.com/alwayssmellitfirst" class="white-text" style="text-decoration: underline;">Jacob</a>
+        </p>
+        <p>
+          <a href="https://github.com/DeviantSchemist" class="white-text" style="text-decoration: underline;">Michael</a>
+        </p>
+        <p>
+          <a href="https://github.com/bronsonsoda" class="white-text" style="text-decoration: underline;">Bronson</a>
+        </p>
+      </div>
+      <div class="col s4">
+        <!-- DO NOT FIX THIS h5 TAG IT HAS AN INVISIBLE ASCII CHARACTER IN IT, ITS INTENTIONAL -->
+        <h5 class="white-text my-h5">‌‌ 
+        </h5>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis"> Follow @CharlotteFrancis</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/alwayssmellitfirst"> Follow @alwayssmellitfirst</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/DeviantSchemist"> Follow @DeviantSchemist</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/bronsonsoda"> Follow @bronsonsoda</a>
+        </p>
+      </div>
+      <div class="col s2">
+        <h5 class="white-text my-h5">Cool links:</h5>
+        <p>
+          <a href="https://github.com/CharlotteFrancis/ComicCol" class="white-text" style="text-decoration: underline;">Our GitHub Repository</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol" data-icon="octicon-star" aria-label="Star CharlotteFrancis/ComicCol on GitHub">Star</a>
+        </p>
+        <p>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol/subscription" data-icon="octicon-eye" aria-label="Watch CharlotteFrancis/ComicCol on GitHub">Watch</a>
+        </p>
+        <p>
+          <a href="https://www.marvel.com/comics/creators/758/leinil_francis_yu" class="white-text" style="text-decoration: underline;">Header Artist: Leinil Yu</a>
+        </p>
+        <p>
+          <a href="https://comicvine.gamespot.com/" class="white-text" style="text-decoration: underline;">Comic Api: ComicVine</a>
+        </p>
+      </div>
+      <!-- padding div -->
+      <div class="col s1"></div>
+    </div>
+    <br>
+    <hr>
+    <div class="row container">
+      <br>
+      <!-- padding div -->
+      <div class="col s1"></div>
+      <div class="col s11">
+        <p class="white-text">© 2021 Charlotte Wong, Jacob Zavita, Michael Ngo, Bronson Perez</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- materialize sidenav -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav')
+      var instances = M.Sidenav.init(elems)
+    });
+  </script>
+  <!-- materialize carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.carousel')
+      var instances = M.Carousel.init(elems)
+    });
+  </script>
+  <!-- materialize parallax -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, {});
+    });
+  </script>
+
+  <!-- gitHub button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- test js -->
+  <script src="../test.js"></script>
+  <!-- our js -->
+  <script src="./assets/js/search.js"></script>
+  <!-- navbar js -->
+  <script src="assets/js/navbar.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
