@@ -1,23 +1,16 @@
 const router = require('express').Router()
-const { Comic, List, ComicList } = require('../models')
+const { Comic } = require('../models')
 const passport = require('passport')
 
-// gets the current user's list of comics
 router.get('/comic', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.list)
+  res.json(req.user.comic)
 })
 
-// gets a comic by its image url
-router.get('/comic/:url', passport.authenticate('jwt'), (req, res) => {
-  Comic.findOne({
-    where: { cover_image: req.params.url }
-  })
-  .then(comic => res.json(comic))
-  .catch(err => res.status(400).json(err))
+router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create({
+  text: req.body.text,
+  isDone: req.body.isDone,
+  uid: req.user.id
 })
-
-// creates a new comic
-router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create(req.body)
   .then(comic => res.json(comic))
   .catch(err => console.log(err)))
 

@@ -1,15 +1,11 @@
 /* MAIN STUFF */
-
 /* modal */
-
 .my-modal {
   overflow-y: hidden;
 }
-
 .modal-image-height {
   height: 450px;
 }
-
 /* nav bar */
 
 .inv {
@@ -25,7 +21,6 @@
 /* footer */
 
 /* header */
-
 #footer-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.651)), url("../image/header2.jpg");
 }
@@ -35,7 +30,6 @@
 }
 
 /* carousel */
-
 .carousel .carousel-item {
   /* add sizing here with !important */
   width: 20% !important;
@@ -50,31 +44,20 @@
 }
 
 /* card collection style */
-
 .collection .collection-item {
   background-color: #253237;
 }
 
 /* footer color */
-
 .footerColor {
   background-color: #243447;
 }
 
 /* END MAIN STUFF */
 
-/* START - SINGLE COMIC STUFF */
-
-.card-content p {
-  font-size: 1vw;
-}
-
-/* END - SINGLE COMIC STUFF */
-
 /* AUTH STUFF */
 
 /* Small text */
-
 .tiny-text {
   font-size: small;
   text-align: center;
@@ -93,7 +76,6 @@
 /* END AUTH STUFF */
 
 /* LIST STUFF */
-
 .colorBorder {
   border-style: solid;
   border-width: 1px;
@@ -107,7 +89,6 @@
 .remove-bottom-margin {
   margin-bottom: 0px;
 }
-
 .remove-top-margin {
   margin-top: 0px;
 }
@@ -142,27 +123,20 @@ td {
 }
 
 /* table stripes color */
-
 table.striped>tbody>tr:nth-child(odd) {
   background-color: rgb(0 0 0 / 50%);
 }
-
 /* END LIST STUFF */
 
 /* SEARCH STUFF */
-
 .small-text {
   font-size: small;
 }
-
 .search-card-height {
   height: 325px;
-}
-
-.search-card-width {
+}.search-card-width {
   height: 375px;
 }
-
 /* END SEARCH STUFF */
 
 /* PALLETE STUFF */
@@ -199,4 +173,8 @@ table.striped>tbody>tr:nth-child(odd) {
 
 .textWhite {
   color: #FFFCF2 !important;
+}
+
+.card-content p {
+  font-size: 1vw;
 }

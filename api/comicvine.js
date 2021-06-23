@@ -10,13 +10,12 @@ axios({
 })
   .then(function (response) {
     const data = response.data.results
-    // console.log(data)
-    console.log('Name: ' + data[0].volume.name)
-    console.log('Description: ' + data[0].description)
-    console.log('Cover: ' + data[0].image.medium_url)
-    console.log('Issue Number: ' + data[0].issue_number)
-    console.log('Cover Date: ' + data[0].cover_date)
-    console.log('Issue Name: ' + data[0].name)
+    console.log(data)
+    // console.log('Name: ' + data[0].volume.name)
+    // console.log('Description: ' + data[0].description)
+    // console.log('Cover: ' + data[0].image.medium_url)
+    // console.log('Issue Number: ' + data[0].issue_number)
+    // console.log('Cover Date: ' + data[0].cover_date)
   })
   .catch(err => console.log(err))
 
@@ -26,5 +25,4 @@ module.exports = router
 // let comicDescription = data[i].description
 // let coverImageMedium = data[i].image.medium_url
 // let comicIssueNumber = data[i].issue_number
-// let comicDate = data[i].cover_date
-// let comicIssueName = data[i].name
+// let comicData = data[i].cover_date

@@ -3,8 +3,20 @@ const Comic = require('./Comic.js')
 const ComicList = require('./ComicList.js')
 const List = require('./List.js')
 const Comment = require('./Comment.js')
+const Review = require('./Review.js')
 
 // your relationships go here...
+
+
+//a user has many reviews
+User.hasMany(Review, {
+  foreignKey: 'user_id'
+})
+
+//a review has one user
+Review.belongsTo(User, {
+  foreignKey: 'user_id'
+})
 
 // a user has many comments
 User.hasMany(Comment, {
@@ -53,4 +65,4 @@ List.belongsToMany(Comic, {
 //   onDelete: 'CASCADE'
 // })
 
-module.exports = { User, Comic, ComicList, List, Comment }
+module.exports = { User, Comic, ComicList, List, Comment, Review }

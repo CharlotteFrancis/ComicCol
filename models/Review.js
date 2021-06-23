@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Comment extends Model { }
+class Review extends Model { }
 
-Comment.init(
+Review.init(
   {
-    id: {
+    review_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -21,8 +21,8 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment'
+    modelName: 'review'
   }
 )
 
-module.exports = Comment
+module.exports = Review
