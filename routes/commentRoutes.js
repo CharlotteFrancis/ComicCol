@@ -8,7 +8,6 @@ router.get('/comment', passport.authenticate('jwt'), (req, res) => {
 
 router.post('/comment', passport.authenticate('jwt'), (req, res) => Comment.create({
   text: req.body.text,
-  isDone: req.body.isDone,
   uid: req.user.id
 })
   .then(comment => res.json(comment))

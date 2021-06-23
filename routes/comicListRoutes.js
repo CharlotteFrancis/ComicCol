@@ -3,7 +3,7 @@ const { ComicList } = require('../models')
 const passport = require('passport')
 
 router.get('/comiclist', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.list)
+  res.json(req.user.comic_list)
 })
 
 router.post('/comiclist', passport.authenticate('jwt'), (req, res) => ComicList.create({

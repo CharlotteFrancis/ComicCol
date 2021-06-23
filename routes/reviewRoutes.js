@@ -8,7 +8,6 @@ router.get('/review', passport.authenticate('jwt'), (req, res) => {
 
 router.post('/review', passport.authenticate('jwt'), (req, res) => Review.create({
   text: req.body.text,
-  isDone: req.body.isDone,
   uid: req.user.id
 })
   .then(review => res.json(review))
