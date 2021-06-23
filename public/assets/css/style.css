@@ -129,6 +129,8 @@ table.striped>tbody>tr:nth-child(odd) {
 }
 .search-card-height {
   height: 325px;
+}.search-card-width {
+  height: 375px;
 }
 /* END SEARCH STUFF */
 
