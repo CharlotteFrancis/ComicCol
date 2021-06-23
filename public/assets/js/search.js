@@ -3,6 +3,7 @@
 const clearComics = _ => {
   document.getElementById('comicResults').innerHTML = ''
 }
+
 // render comics
 const renderRequest = comics => {
   comics.forEach(element => {

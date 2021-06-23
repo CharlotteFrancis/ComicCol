@@ -5,6 +5,6 @@ document.getElementById('createAccount').addEventListener('click', event => {
     email: document.getElementById('email').value,
     password: document.getElementById('password').value
   })
-  .then(() => window.location = '/login.html')
-  .catch(err => console.log(err))
+    .then(() => window.location = '/login.html')
+    .catch(err => console.log(err))
 })

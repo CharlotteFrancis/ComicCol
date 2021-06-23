@@ -135,7 +135,7 @@
               <p></p>
             </div>
             <div class="card-action">
-              <a href="#">Add to list</a>
+              <a class="my-trigger" href="modal1">Add to list</a>
             </div>
           </div>
         </div>
@@ -307,6 +307,13 @@
     var elems = document.querySelectorAll('.parallax');
     var instances = M.Parallax.init(elems, {});
     });
+  </script>
+  <!-- materialize modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal')
+    var instances = M.Modal.init(elems)
+  })
   </script>
 
   <!-- gitHub button -->
