@@ -58,8 +58,8 @@
 /* AUTH STUFF */
 
 /* Small text */
-.tiny-text {
-  font-size: small;
+.tiny-text, p.tiny-text {
+  font-size: small !important;
   text-align: center;
 }
 

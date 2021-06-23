@@ -3,6 +3,7 @@
 const clearComics = _ => {
   document.getElementById('comicResults').innerHTML = ''
 }
+
 // render comics
 const renderRequest = comics => {
   comics.forEach(element => {
@@ -22,7 +23,7 @@ const renderRequest = comics => {
               <p>${element.name}</p>
             </div>
             <div class="card-action">
-              <a href="#">Add to list</a>
+              <a class="my-trigger modal-trigger" href="#modal1">Add to list</a>
             </div>
           </div>
         </div>
@@ -41,4 +42,15 @@ document.getElementById('searchSubmit').addEventListener('click', event => {
       renderRequest(comics.data)
     })
     .catch(err => console.log(err))
+})
+
+// MODAL listener
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('my-trigger')) {
+    // parent parent children0 children1
+    document.getElementById('modalTitle').innerHTML = event.target.parentElement.parentElement.children[0].children[1].innerHTML
+    // test this with a console log
+    console.log('modal listener works')
+    console.log('title is:' + event.target.parentElement.parentElement.children[0].children[1].innerHTML)
+  }
 })
