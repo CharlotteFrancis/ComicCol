@@ -18,13 +18,22 @@ Review.belongsTo(User, {
   foreignKey: 'user_id'
 })
 
+// a review has many comments
+Review.hasMany(Comment, {
+  foreignKey: 'comment_id'
+})
+
+// a comment belongs to a single review
+Comment.belongsTo(Review, {
+  foreignKey: 'review_id'
+})
+
 // a user has many comments
 User.hasMany(Comment, {
   foreignKey: 'user_id'
 })
 
 // a comment belongs to a single user
-// MIGHT NEED TO ADD ONDELETE: 'CASCADE'
 Comment.belongsTo(User, {
   foreignKey: 'user_id'
 })
