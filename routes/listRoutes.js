@@ -34,28 +34,32 @@ router.post('/lists', passport.authenticate('jwt'), (req, res) => {
 // updates the list with the specified id
 router.put('/lists/:id', passport.authenticate('jwt'), (req, res) => {
   List.update(req.body, { where: { id: req.params.id } })
-  .then(list => {
-    return ComicList.findAll({ where: { list_id: req.params.id } })
-  })
-  .then(comicLists => {
-    const comicListIds = comicLists.map(({ comic_id }) => comic_id)
-    const newComicLists = req.body.comicIds
-      .filter(comic_id => !comicListIds.includes(comic_id))
-      .map(comic_id => {
-        return { list_id: req.params.id, comic_id }
-      })
+  .then(list => res.json(list))
+  .catch(err => console.log(err))
 
-    const comicListsToRemove = comicLists
-      .filter(({ comic_id }) => !req.body.comicIds.includes(comic_id))
-      .map(({ id }) => id)
+  // List.update(req.body, { where: { id: req.params.id } })
+  // .then(list => {
+  //   return ComicList.findAll({ where: { list_id: req.params.id } })
+  // })
+  // .then(comicLists => {
+  //   const comicListIds = comicLists.map(({ comic_id }) => comic_id)
+  //   const newComicLists = req.body.comicIds
+  //     .filter(comic_id => !comicListIds.includes(comic_id))
+  //     .map(comic_id => {
+  //       return { list_id: req.params.id, comic_id }
+  //     })
+
+  //   const comicListsToRemove = comicLists
+  //     .filter(({ comic_id }) => !req.body.comicIds.includes(comic_id))
+  //     .map(({ id }) => id)
     
-    return Promise.all([
-      Promise.destroy({ where: { id: comicListsToRemove} }),
-      Promise.bulkCreate(newComicLists)
-    ])
-  })
-  .then(updatedComicLists => res.json(updatedComicLists))
-  .catch(err => res.status(400).json(err))
+  //   return Promise.all([
+  //     Promise.destroy({ where: { id: comicListsToRemove} }),
+  //     Promise.bulkCreate(newComicLists)
+  //   ])
+  // })
+  // .then(updatedComicLists => res.json(updatedComicLists))
+  // .catch(err => res.status(400).json(err))
 })
 
 // deletes a list with the specified id
