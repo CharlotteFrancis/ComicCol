@@ -69,6 +69,13 @@ document.getElementById('addModalListener').addEventListener('click', event => {
     rating: document.getElementById('rating').value,
     completion_status: document.getElementById('completion').value
   }
-
-  // axios.put(`/comicList/${comicListId}`, )
+  axios.put(`/comicList/${comicListId}`, updatedComicList, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then(_ => {
+      renderItems()
+    })
+    .catch(err => console.log(err))
 })
