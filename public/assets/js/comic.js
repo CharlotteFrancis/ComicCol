@@ -37,3 +37,33 @@ renderSingleComic = (comic) => {
     `
   document.getElementById('comicCard').append(comicData)
 }
+
+const getReviews = _ => {
+  axios.get(`/reviews`)
+    .then((reviews) => {
+      console.log(review)
+    })
+    .catch(err => console.log(err))
+}
+
+renderReviews = (reviews) => {
+  let reviewData = document.createElement('div')
+  reviewData.classList = "col s12"
+  reviewData.innerHTML = `
+    <div class="card blue-grey darken-1 comment-card">
+      <div class="card-content white-text">
+        <p class="card-title">
+          <h6 style="margin-bottom: 2px; display: inline;">Username</h6>
+          <p style="display: inline; font-size:small">·</p>
+          <p style="display: inline;">X/10</p>
+          <p style="font-size: smaller;">6/22/2021</p>
+        </p>
+        <hr>
+        <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
+      </div>
+    </div>
+  `
+  document.getElementById('reviewCard').append(reviewData)
+}
+
+renderReviews()
