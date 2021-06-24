@@ -41,3 +41,21 @@ const renderItems = () => {
 }
 
 renderItems()
+
+// Listeners for edit button
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('modal-trigger')) {
+    console.log('hitting this code')
+    document.getElementById('modalTitle').innerHTML = event.target.parentElement.parentElement.children[1].innerHTML
+    document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.children[3].innerHTML
+    document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.children[2].innerHTML
+  } else if (event.target.classList.contains('my-trigger')) {
+    console.log('smacking this code')
+    console.log(event.target.parentElement.classList)
+    document.getElementById('modalTitle').innerHTML = event.target.parentElement.parentElement.parentElement.children[1].innerHTML
+    document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.parentElement.children[3].innerHTML
+    document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.parentElement.children[2].innerHTML
+  }
+})
+
+// Listener to commit edit to ComicList
