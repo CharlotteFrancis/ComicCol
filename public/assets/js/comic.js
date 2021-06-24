@@ -9,7 +9,20 @@
 //   document.getElementById('comicCover').innerHTML = ''
 // }
 
+// Query url stuff
+const params = new URLSearchParams(window.location.search)
+const query = params.get('query1')
+const getComic = _ => {
+  axios.get(`/api/comicVine/comicPage/${query}`)
+    .then((comic) => {
+      // COMIC DATA TO RENDER IS STORED IN comic.data
+      console.log(comic.data)
+    })
+    .catch(err => console.log(err))
+}
 
+getComic()
+//
 
 renderComicTest = () => {
   let comicData = document.createElement('div')

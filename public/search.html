@@ -135,7 +135,7 @@
               <p></p>
             </div>
             <div class="card-action">
-              <a class="my-trigger" href="modal1">Add to list</a>
+              <a class="my-trigger modal-trigger" href="#modal1">Add to list</a>
             </div>
           </div>
         </div>
@@ -202,24 +202,31 @@
       </div>
 
 
-
     </div>
     <!-- END OF CARD RENDERS -->
+
+    <!-- TLDR: -->
+    <!-- TITLE : 'modalTitle' -->
+    <!-- ISSUE NAME : 'modalIssueName' -->
+    <!-- ISSUE NUMBER : 'modalIssueNumber' -->
+    <!-- ADD BUTTON : 'addFromModal' -->
+
     <!-- MODAL -->
     <div id="modal1" class="modal" style="width: 30%; overflow: visible;">
       <div class="modal-content">
-        <h6 id="modalTitle"></h6>
-        <hr style="width: 35%;" class="left">
-        <p style="font-size: smaller; display: inline;">Issue: </p>
+        <blockquote style="margin-bottom: 5px; border-color: #263238;">
+        <h5 id="modalTitle"></h5>
+        <hr style="width: 35%; display: block;" class="left">
+        <br>
+        <p id="modalIssueNumber" style="font-size: smaller; display: inline;"></p>
         <p style="display: inline; font-size:small">·</p>
         <p id="modalIssueName" style="font-size: smaller; display: inline;">06-23-2021</p>
-        <br>
-        <blockquote style="border-color: darkgray; margin-bottom: 5px;">
+        <br><br>
           <!-- <br> -->
           <!-- RATING -->
           <p style="font-size: small; text-align: left;">
              Rating: <div class="input-field inline">
-               <select>
+               <select id="rating">
                 <option value="" disabled selected>Rating</option>
                 <option value="10">(10) Perfect</option>
                 <option value="9">(9) Amazing</option>
@@ -237,20 +244,20 @@
           <!-- COMPLETION STATUS -->
           <p style="font-size: small; text-align: left;">
              Read Status: <div class="input-field inline">
-               <select>
+               <select id="completion">
                 <option value="" disabled selected>Read Status</option>
-                <option value="1">Completed</option>
-                <option value="2">Currently Reading</option>
-                <option value="3">Plan to Read</option>
+                <option value="Completed">Completed</option>
+                <option value="Currently Reading">Currently Reading</option>
+                <option value="Plan to Read">Plan to Read</option>
               </select> 
             </div>
           </p>
           <!-- <br> -->
         </blockquote>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Add Comic</a>
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <div class="modal-footer blue-grey darken-4">
+        <a data-coverImage="" data-description="" data-cover_date="" id="addFromModal" href="#!" class="modal-close waves-effect waves-red btn-flat white-text">Add Comic</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Close</a>
       </div>
     </div>
   </main>
