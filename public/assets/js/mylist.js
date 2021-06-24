@@ -42,7 +42,7 @@ const renderItems = () => {
 
 renderItems()
 
-// Listeners for edit button
+// Listeners for edit button & image click
 document.addEventListener('click', event => {
   if (event.target.classList.contains('modal-trigger')) {
     console.log('hitting this code')
@@ -57,6 +57,12 @@ document.addEventListener('click', event => {
     document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.parentElement.children[3].innerHTML
     document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.parentElement.children[2].innerHTML
     document.getElementById('updateFromModal').dataset.id = event.target.parentElement.dataset.id
+  } else if (event.target.classList.contains('list-cover')) {
+    console.log('hitting this code')
+    const query1 = event.target.parentElement.parentElement.children[1].innerHTML
+    const query2 = event.target.parentElement.parentElement.children[2].innerHTML
+    const query3 = event.target.parentElement.parentElement.children[3].innerHTML
+    window.location = `./comic.html?query1=${query1} ${query2} ${query3}`
   }
 })
 
