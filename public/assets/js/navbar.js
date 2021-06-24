@@ -19,5 +19,5 @@ if (localStorage.getItem('token')) {
 
 document.getElementById('logout').addEventListener('click', event => {
   localStorage.removeItem('token')
-  window.location = '/index.html'
+  window.location = '/'
 })
