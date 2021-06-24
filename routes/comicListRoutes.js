@@ -1,9 +1,14 @@
 const router = require('express').Router()
-const { ComicList } = require('../models')
+const { ComicList, List, Comic } = require('../models')
 const passport = require('passport')
 
+// finds all comic lists
 router.get('/comiclist', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.comic_list)
+  ComicList.findAll({
+    include: [ {model: List}, {model: Comic} ]
+  })
+  .then(comicLists => res.json(comicLists))
+  .catch(err => console.log(err))
 })
 
 router.post('/comiclist', passport.authenticate('jwt'), (req, res) => ComicList.create({

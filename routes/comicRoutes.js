@@ -2,8 +2,9 @@ const router = require('express').Router()
 const { Comic } = require('../models')
 const passport = require('passport')
 
+// returns the current user's list of comics
 router.get('/comic', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.comic)
+  res.json(req.user.list)
 })
 
 router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create({

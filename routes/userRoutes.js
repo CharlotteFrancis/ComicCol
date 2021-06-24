@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User, List, ComicList } = require('../models')
+const { User, List, Comment, Review } = require('../models')
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
 
@@ -8,11 +8,11 @@ router.get('/users/getID', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user.id)
 })
 
-// finds one user by their id
+// finds one user by their id, returns their associated list, comments, and reviews
 router.get('/users/:id', (req, res) => {
   User.findOne({
     where: { id: req.params.id },
-    include: [ {model: List}, {model: ComicList} ]
+    include: [ { model: List }, { model: Comment }, { model: Review } ]
   })
   .then(user => res.json(user))
   .catch(err => console.log(err))
