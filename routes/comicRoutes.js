@@ -1,10 +1,26 @@
 const router = require('express').Router()
-const { Comic } = require('../models')
+const { Comic, Review } = require('../models')
 const passport = require('passport')
 
 // returns the current user's list of comics
 router.get('/comic', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user.list)
+})
+
+// get comic by id - NOT CONFIRMED NEED COVER_IMAGE ROUTE TO SEE IF IT EXISTS IN OUR DATABASE
+router.get('/comic/:id', (req, res) => {
+  Comic.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Review
+      }
+    ]
+  })
+  .then(comic => res.json(comic))
+  .catch(err => res.status(400).json(err))
 })
 
 router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create({
