@@ -20,48 +20,39 @@
   <!-- nav -->
   <nav>
     <div class="nav-wrapper blue-grey darken-4">
-      <a href="#" class="brand-logo center">ComicCol</a>
+      <a href="/index.html" class="brand-logo center">ComicCol</a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li>
           <btn href="#" data-target="slide-out" class="sidenav-trigger">Menu</btn>
         </li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">My List</a></li>
-        <!-- SEARCH BAR IS HERE -->
-        <li>    
-          <div class="center row">
-             <div class="col s12" >
-               <div class="row" id="topbarsearch">
-                 <div class="input-field col s12 white-text ">
-                   <!-- SEARCH BAR ID: 'search' -->
-                   <input type="text" placeholder=" Search" id="search" class="autocomplete white-text">
-                   </div>
-                 </div>
-               </div>
-             </div>          
-         </li> 
-         <!-- BUTTON IS HERE, SEACRCH BUTTON ID: 'submit' -->
-         <li>
-           <button id="submit" class="btn waves-effect waves-light blue-grey darken-2">go</button>
-         </li>
-         <!-- END OF SEARCH BAR LI -->
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/mylist.html">My List</a></li>
+        <li><a href="/search.html">Search</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+  
+      <ul id="nav-mobile" class="right hide-on-med-and-down login-logout">
         <!-- change log in or log out based on user status -->
         <!-- LOGIN BUTTON ID: 'login' -->
-        <li>    
-          <a id="login" href="login.html">Log In</a>  
-        </li> 
+        <li>
+          <div class="inv">
+            <a id="login" href="login.html">Log In</a>
+          </div>
+          <div class="inv">
+            <a id="logout" href=".html">Log Out</a>
+          </div>
+        </li>
       </ul>
-    </div>   
+    </div>
   </nav>
-
+  
   <!-- side nav -->
   <ul id="slide-out" class="sidenav">
     <li><a href="/index.html">Home</a></li>
     <li><a href="/mylist.html">My List</a></li>
-    <li><div class="divider"></div></li>
+    <li>
+      <div class="divider"></div>
+    </li>
     <li><a class="subheader">We can put extra stuff we add here</a></li>
     <li><a class="waves-effect" href="/search.html">Search</a></li>
     <li><a class="waves-effect" href="#!">Fourth Link With Waves</a></li>
