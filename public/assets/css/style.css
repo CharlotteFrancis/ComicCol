@@ -108,17 +108,27 @@
   border-color: #262626;
 }
 
-th {
-  /* background-color: #243447; */
+/* th {
   font-weight: 300;
   font-size: large;
   color: #fff !important;
 }
 
 td {
-  /* font-weight: 100; */
   color: #fff !important;
   padding: 5px;
+} */
+
+/* made specific td and th classes to not interfere with other pages */-
+.list-td {
+  color: #fff !important;
+  padding: 5px;
+}
+
+.list-th {
+  font-weight: 300;
+  font-size: large;
+  color: #fff !important;
 }
 
 .list-cover {
