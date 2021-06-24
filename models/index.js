@@ -63,15 +63,4 @@ List.belongsToMany(Comic, {
   otherKey: 'comic_id'
 })
 
-// // a comic belongs to one list
-// Comic.belongsTo(List, {
-//   foreignKey: 'list_id'
-// })
-
-// // a list has many comics
-// List.hasMany(Comic, {
-//   foreignKey: 'list_id',
-//   onDelete: 'CASCADE'
-// })
-
 module.exports = { User, Comic, ComicList, List, Comment, Review }
