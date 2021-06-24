@@ -1,7 +1,7 @@
 const axios = require('axios')
 const router = require('express').Router()
 
-let search = 'Thor'
+let search = 'superman 28 mythological finale'
 
 axios({
   method:"get",
@@ -10,12 +10,12 @@ axios({
 })
   .then(function (response) {
     const data = response.data.results
-    console.log(data)
-    // console.log('Name: ' + data[0].volume.name)
-    // console.log('Description: ' + data[0].description)
-    // console.log('Cover: ' + data[0].image.medium_url)
-    // console.log('Issue Number: ' + data[0].issue_number)
-    // console.log('Cover Date: ' + data[0].cover_date)
+    // console.log(data)
+    console.log('Name: ' + data[0].volume.name)
+    console.log('Description: ' + data[0].description)
+    console.log('Cover: ' + data[0].image.medium_url)
+    console.log('Issue Number: ' + data[0].issue_number)
+    console.log('Cover Date: ' + data[0].cover_date)
   })
   .catch(err => console.log(err))
 
