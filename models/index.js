@@ -63,4 +63,12 @@ List.belongsToMany(Comic, {
   otherKey: 'comic_id'
 })
 
+Comic.hasMany(Review, {
+  foreignKey: 'comic_id'
+})
+
+Review.belongsTo(Comic, {
+  foreignKey: 'comic_id'
+})
+
 module.exports = { User, Comic, ComicList, List, Comment, Review }

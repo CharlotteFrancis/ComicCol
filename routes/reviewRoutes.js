@@ -23,11 +23,11 @@ router.delete('/review/:id', passport.authenticate('jwt'), (req, res) => Review.
   .catch(err => console.log(err)))
 
 // get all reviews on a single comic
-// router.get('/reviews', (req, res) => {
-//   Review.findAll({ where: { id: Comic.id}})
-//   .then(results => {
-//     res.json(reviews)
-//   })
-// })
+router.get('/reviews', (req, res) => {
+  Review.findAll({ where: { id: Comic.id}})
+  .then(results => {
+    res.json(reviews)
+  })
+})
 
 module.exports = router
