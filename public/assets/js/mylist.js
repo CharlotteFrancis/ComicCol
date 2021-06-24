@@ -49,13 +49,26 @@ document.addEventListener('click', event => {
     document.getElementById('modalTitle').innerHTML = event.target.parentElement.parentElement.children[1].innerHTML
     document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.children[3].innerHTML
     document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.children[2].innerHTML
+    document.getElementById('updateFromModal').dataset.id = event.target.dataset.id
   } else if (event.target.classList.contains('my-trigger')) {
     console.log('smacking this code')
     console.log(event.target.parentElement.classList)
     document.getElementById('modalTitle').innerHTML = event.target.parentElement.parentElement.parentElement.children[1].innerHTML
     document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.parentElement.children[3].innerHTML
     document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.parentElement.children[2].innerHTML
+    document.getElementById('updateFromModal').dataset.id = event.target.parentElement.dataset.id
   }
 })
 
 // Listener to commit edit to ComicList
+document.getElementById('addModalListener').addEventListener('click', event => {
+  // basically get the data and make an object
+  const comicListId = event.target.dataset.id
+
+  const updatedComicList = {
+    rating: document.getElementById('rating').value,
+    completion_status: document.getElementById('completion').value
+  }
+
+  // axios.put(`/comicList/${comicListId}`, )
+})
