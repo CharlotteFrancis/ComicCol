@@ -5,10 +5,10 @@ const passport = require('passport')
 // finds all comic lists
 router.get('/comiclist', passport.authenticate('jwt'), (req, res) => {
   ComicList.findAll({
-    include: [ {model: List}, {model: Comic} ]
+    include: [{ model: List }, { model: Comic }]
   })
-  .then(comicLists => res.json(comicLists))
-  .catch(err => console.log(err))
+    .then(comicLists => res.json(comicLists))
+    .catch(err => console.log(err))
 })
 
 router.post('/comiclist', passport.authenticate('jwt'), (req, res) => ComicList.create({
