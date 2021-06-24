@@ -83,52 +83,49 @@
       <div id="comicCard"></div>
 
       <!-- Review section -->
-      <h3 class="center white-text">User Reviews</h3>
+      <div class="row">
+        <div class="col">
+          <h3 class="center white-text">User Reviews</h3>
+        </div>
+        <div class="col">
+          <!-- fix button to be lower -->
+          <a class="waves-effect waves-light btn review-btn modal-trigger" style="margin-top: 33px;" href="#modal1">Add your review</a>
+        </div>     
+      </div>
       <!-- card for comment elem -->
         <div class="row">
           <div class="col s12">
             <div class="card blue-grey darken-1 comment-card">
               <div class="card-content white-text">
-                <span class="card-title">The Witch is Back!</span>
+                <p class="card-title">
+                  <h6 style="margin-bottom: 2px; display: inline;">Username</h6>
+                  <p style="display: inline; font-size:small">·</p>
+                  <p style="display: inline;">X/10</p>
+                  <p style="font-size: smaller;">6/22/2021</p>
+                </p>
+                <hr>                
                 <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
               </div>
             </div>
           </div>
- 
-          <div class="col s12">
-            <div class="card blue-grey darken-1 comment-card">
-              <div class="card-content white-text">
-                <span class="card-title">The Witch is Back!</span>
-                <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an
-                  interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working
-                  Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <div class="col s12">
-            <div class="card blue-grey darken-1 comment-card">
-              <div class="card-content white-text">
-                <span class="card-title">The Witch is Back!</span>
-                <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an
-                  interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working
-                  Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
 
-          <div class="col s12">
-            <div class="card blue-grey darken-1 comment-card">
-              <div class="card-content white-text">
-                <span class="card-title">The Witch is Back!</span>
-                <p>This issue carries on directly...</p>
-              </div>
-            </div>
-          </div>
+    <!-- Modal Structure for leaving a review -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <!-- <h4>${comicName} #${comicIssueNumber} - ${comicIssueName}</h4> -->
+        <p>Your Review:</p>
+        <textarea name="comment-text" id="comment-text" cols="30" rows="20"
+          placeholder="Hands down, best issue of the series"></textarea>
+        <div class="modal-footer">
+          <a href="#!" id="commentSubmit" class="modal-close waves-effect waves-green btn">Submit Review</a>
         </div>
       </div>
     </div>
-  
+    
   <!-- footer -->
   <div class="section footerColor" style="padding-top: 2%;">
     <div class="row container">
@@ -223,44 +220,32 @@
       var instances = M.Sidenav.init(elems)
     });
   </script>
-  <!-- materialize carousel -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.carousel')
-      var instances = M.Carousel.init(elems)
-    });
-  </script>
-  <!-- materialize parallax -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.parallax');
-      var instances = M.Parallax.init(elems, {});
-    });
-  </script>
 
   <!-- materialize Material Box -->
   <script>
       document.addEventListener('DOMContentLoaded', function () {
-          var elems = document.querySelectorAll('.materialboxed');
-          var instances = M.Materialbox.init(elems);
-        });
+          var elems = document.querySelectorAll('.materialboxed')
+          var instances = M.Materialbox.init(elems)
+        })
   </script>
+
+    <!-- comment/review modal -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+      });
+    </script>
 
   <!-- gitHub button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <!-- test js -->
-  <!-- <script src="../test.js"></script> -->
   <!-- our js -->
   <script src="./assets/js/index.js"></script>
   <script src="assets/js/comic.js"></script>
 
   <!-- navbar js -->
   <script src="assets/js/navbar.js"></script>
-  <script>
-
-  </script>
 </body>
-
 </html>
