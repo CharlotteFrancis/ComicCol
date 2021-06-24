@@ -2,13 +2,13 @@ const router = require('express').Router()
 const { Review } = require('../models')
 const passport = require('passport')
 
+// gets the current user's reviews
 router.get('/review', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user.review)
 })
 
 router.post('/review', passport.authenticate('jwt'), (req, res) => Review.create({
   text: req.body.text,
-  isDone: req.body.isDone,
   uid: req.user.id
 })
   .then(review => res.json(review))
