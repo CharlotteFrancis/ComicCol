@@ -70,5 +70,5 @@ document.getElementById('addModalListener').addEventListener('click', event => {
     completion_status: document.getElementById('completion').value
   }
 
-  axios.put(`/comicList/${comicListId}`, )
+  // axios.put(`/comicList/${comicListId}`, )
 })
