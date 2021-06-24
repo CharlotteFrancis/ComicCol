@@ -2,7 +2,9 @@
 // basic "Add to list" modal logic:
 
 // 1: modal populates itself using parent object it was called from
-// shows options for read status, rating, etc
+// shows options for read status, rating, etc im
+
+// im lazy to do number 1 LOL
 
 // 2: when the user clicks on the confirm button create a comic object,
 // query the comic db with a "findOne" to see if comic exists in our db
