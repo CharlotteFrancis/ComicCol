@@ -22,7 +22,10 @@ document.getElementById('submitLogIn').addEventListener('click', event => {
                   'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
               })
-              .then(() => console.log('Created new list for current user!'))
+              .then(() => {
+                console.log('Created new list for current user!')
+                window.location = '/index.html'
+            })
               .catch(err => console.error(err))
             }
           })
@@ -30,7 +33,6 @@ document.getElementById('submitLogIn').addEventListener('click', event => {
         })
         .catch(err => console.error(err))
 
-        window.location = '/index.html'
       }
       else {
         alert('Invalid username or password')
