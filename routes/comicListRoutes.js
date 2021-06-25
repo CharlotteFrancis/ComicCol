@@ -19,7 +19,7 @@ router.get('/comiclist/:comic_id/:user_id', passport.authenticate('jwt'), (req, 
       user_id: req.params.user_id
     }
   })
-  .then(comicLists => res.json(comicList))
+  .then(comicLists => res.json(comicLists))
   .catch(err => console.log(err))
 })
 

@@ -19,8 +19,21 @@ router.get('/comic/:id', (req, res) => {
       }
     ]
   })
-  .then(comic => res.json(comic))
-  .catch(err => res.status(400).json(err))
+    .then(comic => res.json(comic))
+    .catch(err => res.status(400).json(err))
+})
+
+// see if comic is in our database route
+router.get('/comic/exists/:title/:issue/:name', (req, res) => {
+  Comic.findOne({
+    where: {
+      title: req.params.id,
+      issue_number: req.params.issue,
+      issue_name: req.params.name
+    }
+  })
+    .then((comic) => res.json(comic.id))
+    .catch(_ => res.json('no such comic exists'))
 })
 
 router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create({

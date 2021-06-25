@@ -7,6 +7,20 @@ router.get('/lists', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user.list)
 })
 
+// get list by id
+router.get('/lists/:id', (req, res) => {
+  List.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      { model: Comic }
+    ]
+  })
+    .then(idlist => res.json(idlist))
+    .catch(err => res.status(400).json(err))
+})
+
 // creates a list for the current user
 router.post('/lists', passport.authenticate('jwt'), (req, res) => {
   /* req.body looks like this:

@@ -74,7 +74,7 @@ document.getElementById('addFromModal').addEventListener('click', _ => {
     cover_date: document.getElementById('addFromModal').dataset.cover_date
   }
 
-  // actually this needs comic id too..
+  // actually this needs comiclist object id for the axios request
   const comicList = {
     rating: document.getElementById('rating').value,
     completion_status: document.getElementById('completion').value
