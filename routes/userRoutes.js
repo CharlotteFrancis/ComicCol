@@ -21,7 +21,7 @@ router.get('/users/:id', (req, res) => {
 router.post('/users/register', (req, res) => {
   const { username, email } = req.body
 
-  User.register(new User({ username, email}), req.body.password, err => {
+  User.register(new User({ username, email }), req.body.password, err => {
     if (err) { console.log(err) }
     res.sendStatus(200)
   })
