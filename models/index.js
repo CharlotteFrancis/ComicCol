@@ -7,7 +7,6 @@ const Review = require('./Review.js')
 
 // your relationships go here...
 
-
 //a user has many reviews
 User.hasMany(Review, {
   foreignKey: 'user_id'
