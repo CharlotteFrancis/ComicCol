@@ -1,3 +1,5 @@
+let comicData = []
+
 // Query url stuff
 const params = new URLSearchParams(window.location.search)
 const query = params.get('query1')
@@ -6,6 +8,7 @@ const getComic = _ => {
     .then((comic) => {
       // COMIC DATA TO RENDER IS STORED IN comic.data
       console.log(comic.data[0])
+      comicData = comic.data[0]
       renderSingleComic(comic)
     })
     .catch(err => console.log(err))
@@ -36,6 +39,25 @@ renderSingleComic = (comic) => {
     </div>
     `
   document.getElementById('comicCard').append(comicData)
+
+  axios.get(`api/comic/exists/${comic.data[0].volume.name}/${comic.data[0].issue_number}/${comic.data[0].name}`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then(thisComic => {
+      console.log(thisComic.data)
+      axios.get(`api/comic/${thisComic.data}`)
+        .then((myComic) => {
+          myComic.data.reviews.forEach(element => {
+            console.log(element)
+            renderReviews(element)
+          })
+          // end console.log
+        })
+        .catch(err => console.log('There is an error in the get comic by id: ', err))
+    })
+    .catch(_ => console.log('no reviews'))
 }
 
 // const getReviews = _ => {
@@ -46,7 +68,7 @@ renderSingleComic = (comic) => {
 //     .catch(err => console.log(err))
 // }
 
-renderReviews = (review) => {
+const renderReviews = (review) => {
   let reviewData = document.createElement('div')
   reviewData.classList = "col s12"
   reviewData.innerHTML = `
@@ -66,20 +88,36 @@ renderReviews = (review) => {
   document.getElementById('reviewCard').append(reviewData)
 }
 
+// const renderReviews = _ => {
+
+// }
+
 // event listener for posting a review
 document.getElementById('commentSubmit').addEventListener('click', event => {
   event.preventDefault()
-  axios.post('/api/review',
-    {
-      text: document.getElementById('comment-text').value
-    }, {
+  axios.get(`api/comic/exists/${comicData.volume.name}/${comicData.issue_number}/${comicData.name}`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   })
-    .then(({ data: review }) => {
-      console.log(review)
-      renderReviews(review)
+    .then((comicId) => {
+      axios.post('/api/review',
+        {
+          text: document.getElementById('comment-text').value,
+          comic_id: comicId.data
+        }, {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+          }
+        })
+        .then(({ data: review }) => {
+          console.log(review)
+          renderReviews(review)
+        })
+        .catch(err => console.log(err))
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+      console.log(err)
+      // add comic to db and get iud
+    })
 })
