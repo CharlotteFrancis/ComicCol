@@ -13,29 +13,30 @@
 // put a data-id attriute on the button when rendering
 // renders a user's list of comics
 const renderItems = () => {
-  axios.get('/api/users/getID', {
+  document.getElementById('comicList').innerHTML = ''
+  axios.get('/api/lists', {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   })
-    .then(({data: userID}) => {
-      axios.get(`/api/users/${userID}`)
-        .then(({data: userInfo}) => {
-          userInfo.list.forEach(comic => {
-            let listItem = document.createElement('tr')
-            listItem.innerHTML = `
-            <td><img class="list-cover" src="${comic.cover_image}" alt="cover"</td>
-            <td>${comic.name}</td>
-            <td>${comic.issue_number}</td>
-            <td>${comic.issue_name}</td>
-            <td>${userInfo.comicList.rating} / 10</td>
-            <td>${userInfo.comicList.completion_status}</td>
-            <td><button class="btn waves-effect edit waves-light blue-grey darken-2 rounded-corners"><i class="far fa-edit"></i></button></td>
-          `
-            document.getElementById('comicList').append(listItem)
-          })
-        })
-        .catch(err => console.log(err))
+    .then((userList) => {
+      console.log(userList.data.comics)
+      const myComics = userList.data.comics
+      myComics.forEach(element => {
+        // inside for each
+        let comic = document.createElement('tr')
+        comic.innerHTML = `
+        <td class="list-td"><img class="list-cover" src="${element.cover_image}" alt="cover"></td>
+        <td class="list-td">${element.name}</td>
+        <td class="list-td">${element.issue_number}</td>
+        <td class="list-td">${element.issue_name}</td>
+        <td class="list-td">${element.comic_list.rating} / 10</td>
+        <td class="list-td">${element.comic_list.completion_status}</td>
+        <td class="list-td"><a href="#modal1" data-id="${element.comic_list.id}" class="btn waves-effect edit waves-light blue-grey darken-2 rounded-corners modal-trigger"><i class="far fa-edit my-trigger"></i></a></td>
+        `
+        document.getElementById('comicList').append(comic)
+      })
+      // Yay ! got it to working
     })
     .catch(err => console.log(err))
 }
@@ -72,10 +73,12 @@ document.getElementById('updateFromModal').addEventListener('click', event => {
   const comicListId = event.target.dataset.id
 
   const updatedComicList = {
-    rating: document.getElementById('rating').value,
+    rating: parseInt(document.getElementById('rating').value),
     completion_status: document.getElementById('completion').value
   }
-  axios.put(`/comicList/${comicListId}`, updatedComicList, {
+  console.log(updatedComicList)
+
+  axios.put(`api/comiclist/${comicListId}`, updatedComicList, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }

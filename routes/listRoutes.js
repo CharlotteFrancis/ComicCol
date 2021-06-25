@@ -4,7 +4,17 @@ const passport = require('passport')
 
 // gets the current user's list
 router.get('/lists', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.list)
+  // res.json(req.user.list)
+  List.findOne({
+    where: {
+      id: req.user.id
+    },
+    include: [
+      { model: Comic }
+    ]
+  })
+    .then(idlist => res.json(idlist))
+    .catch(err => res.status(400).json(err))
 })
 
 // get list by id
