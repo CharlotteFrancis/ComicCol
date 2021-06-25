@@ -115,7 +115,7 @@ document.getElementById('addFromModal').addEventListener('click', _ => {
         }
       })
         .then((myList) => {
-          console.log('from comicExists : ', myList.data.id)
+          console.log('from comicExists my list id: ', myList.data.id)
           // step 3
           axios.post('/api/comiclist', {
             rating: document.getElementById('rating').value,

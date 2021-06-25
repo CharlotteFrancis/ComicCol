@@ -120,6 +120,10 @@
   padding: 5px;
 }  */
 
+.z-align{
+  
+}
+
 /* made specific td and th classes to not interfere with other pages */
 td.list-td, list-td {
   color: #fff !important;
