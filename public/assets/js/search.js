@@ -5,42 +5,6 @@ const clearComics = _ => {
   document.getElementById('comicResults').innerHTML = ''
 }
 
-// comic exists?
-// const comicExists = (name, issueNumber, issueName) => {
-//   axios.get(`api/comic/exists/${name}/${issueNumber}/${issueName}`, {
-//     headers: {
-//       'Authorization': `Bearer ${localStorage.getItem('token')}`
-//     }
-//   })
-//     .then((comicId) => {
-//       console.log('from comicExists comicID is ', comicId.data)
-//       return comicId.data
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       return null
-//     })
-// }
-
-// async function comicExists (name, issueNumber, issueName) {
-//   const response = await new Promise((resolve, reject) => {
-//     axios.get(`api/comic/exists/${name}/${issueNumber}/${issueName}`, {
-//       headers: {
-//         'Authorization': `Bearer ${localStorage.getItem('token')}`
-//       }
-//     })
-//       .then((comicId) => {
-//         console.log('from comicExists comicID is ', comicId.data)
-//         resolve(comicId.data)
-//       })
-//       .catch(err => {
-//         console.log(err)
-//         resolve(null)
-//       })
-//   })
-//   return response
-// }
-
 // create comic in db
 const createComic = comic => {
   axios.post('api/comic', comic, {
@@ -87,11 +51,13 @@ const renderRequest = comics => {
 // SUBMIT BUTTON LISTENER
 document.getElementById('searchSubmit').addEventListener('click', event => {
   event.preventDefault()
+  document.getElementById('spinner').classList = ''
   const query = document.getElementById('comicSearch').value
   axios.get(`/api/comicVine/${query}`)
     .then((comics) => {
       clearComics()
       renderRequest(comics.data)
+      document.getElementById('spinner').classList = 'hide'
     })
     .catch(err => console.log(err))
 })
