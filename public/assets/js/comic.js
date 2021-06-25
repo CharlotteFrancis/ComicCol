@@ -77,7 +77,7 @@ const renderReviews = (review) => {
             <p class="card-title">
               <h6 style="margin-bottom: 2px; display: inline;">${whatIsThis.username}</h6>
               <p style="display: inline; font-size:small">·</p>
-              <p style="display: inline;">${review.createdAt}</p>
+              <p style="display: inline;">${review.createdAt.slice(0, 10)}</p>
             </p>
             <hr>
             ${review.text}
