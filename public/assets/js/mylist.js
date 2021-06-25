@@ -67,7 +67,7 @@ document.addEventListener('click', event => {
 })
 
 // Listener to commit edit to ComicList
-document.getElementById('addModalListener').addEventListener('click', event => {
+document.getElementById('updateFromModal').addEventListener('click', event => {
   // basically get the data and make an object
   const comicListId = event.target.dataset.id
 

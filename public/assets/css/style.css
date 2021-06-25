@@ -113,14 +113,15 @@
   font-size: large;
   color: #fff !important;
 }
+*/
 
-td {
+/* td {
   color: #fff !important;
   padding: 5px;
-} */
+}  */
 
-/* made specific td and th classes to not interfere with other pages */-
-.list-td {
+/* made specific td and th classes to not interfere with other pages */
+td.list-td, list-td {
   color: #fff !important;
   padding: 5px;
 }
