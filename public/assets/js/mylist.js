@@ -51,6 +51,7 @@ document.addEventListener('click', event => {
     document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.children[3].innerHTML
     document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.children[2].innerHTML
     document.getElementById('updateFromModal').dataset.id = event.target.dataset.id
+    document.getElementById('deleteFromModal').dataset.id = event.target.dataset.id
   } else if (event.target.classList.contains('my-trigger')) {
     console.log('smacking this code')
     console.log(event.target.parentElement.classList)
@@ -58,6 +59,7 @@ document.addEventListener('click', event => {
     document.getElementById('modalIssueName').innerHTML = event.target.parentElement.parentElement.parentElement.children[3].innerHTML
     document.getElementById('modalIssueNumber').innerHTML = event.target.parentElement.parentElement.parentElement.children[2].innerHTML
     document.getElementById('updateFromModal').dataset.id = event.target.parentElement.dataset.id
+    document.getElementById('deleteFromModal').dataset.id = event.target.parentElement.dataset.id
   } else if (event.target.classList.contains('list-cover')) {
     console.log('hitting this code')
     const query1 = event.target.parentElement.parentElement.children[1].innerHTML
@@ -87,4 +89,17 @@ document.getElementById('updateFromModal').addEventListener('click', event => {
       renderItems()
     })
     .catch(err => console.log(err))
+})
+
+//Listening for delete? works 😎
+document.getElementById('deleteFromModal').addEventListener('click', event => {
+  axios.delete(`api/comicList/${event.target.dataset.id}`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+  .then(() => {
+    renderItems()
+  })
+  .catch(err => console.log(err))
 })
