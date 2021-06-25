@@ -1,3 +1,5 @@
+// const { default: axios } = require("axios")
+
 let comicData = []
 
 // Query url stuff
@@ -63,37 +65,29 @@ renderSingleComic = (comic) => {
     })
 }
 
-// const getReviews = _ => {
-//   axios.get(`/reviews`)
-//     .then((reviews) => {
-//       console.log(review)
-//     })
-//     .catch(err => console.log(err))
-// }
-
 const renderReviews = (review) => {
-  let reviewData = document.createElement('div')
-  reviewData.classList = "col s12"
-  reviewData.innerHTML = `
-    <div class="card blue-grey darken-1 comment-card">
-      <div class="card-content white-text">
-        <p class="card-title">
-          <h6 style="margin-bottom: 2px; display: inline;">Username</h6>
-          <p style="display: inline; font-size:small">·</p>
-          <p style="display: inline;">X/10</p>
-          <p style="font-size: smaller;">6/22/2021</p>
-        </p>
-        <hr>
-        ${review.text}
-      </div>
-    </div>
-  `
-  document.getElementById('reviewCard').append(reviewData)
+  console.log(review.user_id)
+  axios.get(`api/users/${review.user_id}`)
+    .then(({ data: whatIsThis }) => {
+      let reviewData = document.createElement('div')
+      reviewData.classList = "col s12"
+      reviewData.innerHTML = `
+        <div class="card blue-grey darken-1 comment-card">
+          <div class="card-content white-text">
+            <p class="card-title">
+              <h6 style="margin-bottom: 2px; display: inline;">${whatIsThis.username}</h6>
+              <p style="display: inline; font-size:small">·</p>
+              <p style="display: inline;">${review.createdAt}</p>
+            </p>
+            <hr>
+            ${review.text}
+          </div>
+        </div>
+      `
+      document.getElementById('reviewCard').append(reviewData)
+    })
+    .catch(err => console.log(err))
 }
-
-// const renderReviews = _ => {
-
-// }
 
 // event listener for posting a review
 document.getElementById('commentSubmit').addEventListener('click', event => {
