@@ -27,13 +27,17 @@ router.get('/comic/:id', (req, res) => {
 router.get('/comic/exists/:title/:issue/:name', (req, res) => {
   Comic.findOne({
     where: {
-      title: req.params.id,
+      name: req.params.title,
       issue_number: req.params.issue,
       issue_name: req.params.name
     }
   })
-    .then((comic) => res.json(comic.id))
-    .catch(_ => res.json('no such comic exists'))
+    .then((comi) => {
+      res.json(comi.id)
+    })
+    .catch(err => {
+      res.status(400).json(err)
+    })
 })
 
 router.post('/comic', passport.authenticate('jwt'), (req, res) => Comic.create({

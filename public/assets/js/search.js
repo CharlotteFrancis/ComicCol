@@ -5,6 +5,56 @@ const clearComics = _ => {
   document.getElementById('comicResults').innerHTML = ''
 }
 
+// comic exists?
+// const comicExists = (name, issueNumber, issueName) => {
+//   axios.get(`api/comic/exists/${name}/${issueNumber}/${issueName}`, {
+//     headers: {
+//       'Authorization': `Bearer ${localStorage.getItem('token')}`
+//     }
+//   })
+//     .then((comicId) => {
+//       console.log('from comicExists comicID is ', comicId.data)
+//       return comicId.data
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       return null
+//     })
+// }
+
+// async function comicExists (name, issueNumber, issueName) {
+//   const response = await new Promise((resolve, reject) => {
+//     axios.get(`api/comic/exists/${name}/${issueNumber}/${issueName}`, {
+//       headers: {
+//         'Authorization': `Bearer ${localStorage.getItem('token')}`
+//       }
+//     })
+//       .then((comicId) => {
+//         console.log('from comicExists comicID is ', comicId.data)
+//         resolve(comicId.data)
+//       })
+//       .catch(err => {
+//         console.log(err)
+//         resolve(null)
+//       })
+//   })
+//   return response
+// }
+
+// create comic in db
+const createComic = comic => {
+  axios.post('api/comic', comic, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then((newComic) => {
+      console.log('from createComic comicID is ', newComic.data.id)
+      return newComic.data.id
+    })
+    .catch(err => console.log('error in create comic:', err))
+}
+
 // render comics
 const renderRequest = comics => {
   comics.forEach((element, i) => {
@@ -63,26 +113,99 @@ document.addEventListener('click', event => {
   }
 })
 
+// code to get the actual description: erroring out because mysql cant store long strings
+// description: comicDesc[document.getElementById('addFromModal').dataset.description],
 // get comic object ready for export
 document.getElementById('addFromModal').addEventListener('click', _ => {
   const comic = {
     name: document.getElementById('modalTitle').innerHTML,
-    description: comicDesc[document.getElementById('addFromModal').dataset.description],
+    description: null,
     cover_image: document.getElementById('addFromModal').dataset.coverImage,
     issue_number: document.getElementById('modalIssueNumber').innerHTML,
     issue_name: document.getElementById('modalIssueName').innerHTML,
     cover_date: document.getElementById('addFromModal').dataset.cover_date
   }
 
-  // actually this needs comiclist object id for the axios request
-  const comicList = {
-    rating: document.getElementById('rating').value,
-    completion_status: document.getElementById('completion').value
-  }
+  // Logic
+  // 1: check if Comic is in db. if it is then use its id, if not then add it and get that id, store in local variable comic_id
+  // 2: get the user's list id with a user axios req
+  // 3: post ComicList obj using user's input data, list_id, and comic_id
 
-  console.log(document.getElementById('addFromModal').dataset.description)
-  console.log(comicList)
-  console.log(comic)
+  // step 1
+  let comicID = ''
+  axios.get(`api/comic/exists/${comic.name}/${comic.issue_number}/${comic.issue_name}`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then((comicId) => {
+      console.log('from comicExists comicID is ', comicId.data)
+      comicID = comicId.data
+      // ROUTE 1
+      // step 2
+      axios.get('api/lists/', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      })
+        .then((myList) => {
+          console.log('from comicExists : ', myList.data.id)
+          // step 3
+          axios.post('/api/comiclist', {
+            rating: document.getElementById('rating').value,
+            completion_status: document.getElementById('completion').value,
+            comic_id: comicID,
+            list_id: myList.data.id
+          }, {
+            headers: {
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+          })
+            .then(_ => console.log('added ComicList to db!'))
+            .catch(err => console.log('error in post comicList from comicExists :', err))
+        })
+        .catch(err => console.log('error in get my list', err))
+        // end ROUTE 1
+    })
+    .catch(err => {
+      console.log('no such comic exists', err)
+      // create comic
+      axios.post('api/comic', comic, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      })
+        .then((newComic) => {
+          console.log('Comic created! id:', newComic.data.id)
+          comicID = newComic.data.id
+          // ROUTE 2
+          // step 2
+          axios.get('api/lists/', {
+            headers: {
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+          })
+            .then((myList) => {
+              console.log('from comicExists : ', myList.data.id)
+              // step 3
+              axios.post('/api/comiclist', {
+                rating: document.getElementById('rating').value,
+                completion_status: document.getElementById('completion').value,
+                comic_id: comicID,
+                list_id: myList.data.id
+              }, {
+                headers: {
+                  'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+              })
+                .then(_ => console.log('added ComicList to db!'))
+                .catch(err => console.log('error in post comicList from comicExists :', err))
+            })
+            .catch(err => console.log('error in get my list', err))
+          // END ROUTE 2
+        })
+        .catch(err => console.log('error in create comic, not created:', err))
+    })
 })
 
 document.addEventListener('click', event => {
