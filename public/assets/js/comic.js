@@ -38,15 +38,15 @@ renderSingleComic = (comic) => {
   document.getElementById('comicCard').append(comicData)
 }
 
-const getReviews = _ => {
-  axios.get(`/reviews`)
-    .then((reviews) => {
-      console.log(review)
-    })
-    .catch(err => console.log(err))
-}
+// const getReviews = _ => {
+//   axios.get(`/reviews`)
+//     .then((reviews) => {
+//       console.log(review)
+//     })
+//     .catch(err => console.log(err))
+// }
 
-renderReviews = (reviews) => {
+renderReviews = (review) => {
   let reviewData = document.createElement('div')
   reviewData.classList = "col s12"
   reviewData.innerHTML = `
@@ -59,14 +59,12 @@ renderReviews = (reviews) => {
           <p style="font-size: smaller;">6/22/2021</p>
         </p>
         <hr>
-        <p>This issue carries on directly from the last one as Wonder Woman is forced to fight Circe. There was an interesting altercation immediately before Diana realizes something is wrong. Seeing that her plan isn't working Circe instead tells Diana she will return Themyscira providing that she takes the life of an innocence.</p>
+        ${review.text}
       </div>
     </div>
   `
   document.getElementById('reviewCard').append(reviewData)
 }
-
-renderReviews()
 
 // event listener for posting a review
 document.getElementById('commentSubmit').addEventListener('click', event => {
@@ -81,7 +79,7 @@ document.getElementById('commentSubmit').addEventListener('click', event => {
   })
     .then(({ data: review }) => {
       console.log(review)
-      // renderReviews(review)
+      renderReviews(review)
     })
     .catch(err => console.log(err))
 })
