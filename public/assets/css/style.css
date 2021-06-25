@@ -113,15 +113,14 @@
   font-size: large;
   color: #fff !important;
 }
-*/
 
-/* td {
+td {
   color: #fff !important;
   padding: 5px;
 }  */
 
 .z-align{
-  
+  /* for spinner */
 }
 
 /* made specific td and th classes to not interfere with other pages */

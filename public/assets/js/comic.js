@@ -25,16 +25,16 @@ renderSingleComic = (comic) => {
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <h2>${comic.data[0].volume.name} #${comic.data[0].issue_number}</h2>
-          <h3>${comic.data[0].name}</h3>
-          <h4>Cover Date: ${comic.data[0].cover_date}</h4>
-          <h4>Average Rating: X/10</h4>
-          <h5>Description</h5>
+          <h3>${comic.data[0].volume.name} #${comic.data[0].issue_number}</h3>
+          <hr style="width: 35%;" class="left">
+          <br>
+          <h5 style="display: inline;">${comic.data[0].name}</h5> 
+          <h5 style="display: inline;"> · </h5>
+          <h5 style="display: inline;">${comic.data[0].cover_date}</h5>
+          <h5>Description:</h5>
           ${comic.data[0].description}
         </div>
         <div class="card-action">
-        <p class="right">Add to your collection</p>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
       </div>
     </div>
     `
@@ -57,7 +57,10 @@ renderSingleComic = (comic) => {
         })
         .catch(err => console.log('There is an error in the get comic by id: ', err))
     })
-    .catch(_ => console.log('no reviews'))
+    .catch(_ => {
+      document.getElementById('commentSubmit').classList.add('hide')
+      console.log('no reviews')
+    })
 }
 
 // const getReviews = _ => {
