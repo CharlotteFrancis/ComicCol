@@ -48,19 +48,27 @@
   <ul id="slide-out" class="sidenav">
     <li><a href="/index.html">Home</a></li>
     <li><a href="/mylist.html">My List</a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a class="subheader">We can put extra stuff we add here</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Extra stuff</a></li>
     <li><a class="waves-effect" href="/search.html">Search</a></li>
-    <li><a class="waves-effect" href="#!">Fourth Link With Waves</a></li>
   </ul>
   
+    <!-- header -->
+    <header class="section no-pad-bot" id="index-banner" style="height: 200px;">
+      <section class="container">
+        <h1 class="header center white-text remove-bottom-margin">Comic Collection</h1>
+        <div class="row center">
+          <h5 class="header col s12 light white-text">View comic data</h5>
+        </div>
+        <br><br>
+      </section>
+    </header>
+
   <!-- container for comic info and comments -->
   <div class="container">
     <div class="col s12 m7">
       <div class="row center">
-        <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5>
+        <!-- <h5 class="header col s12 light white-text">Showcase your comic collection and share with friends!</h5> -->
       </div>
 
       <!-- render comic info here-->
@@ -73,7 +81,7 @@
         </div>
         <div class="col">
           <!-- fix button to be lower -->
-          <a class="waves-effect waves-light btn review-btn modal-trigger" style="margin-top: 33px;" href="#modal1">Add your review</a>
+          <a class="waves-effect waves-light btn-large review-btn modal-trigger blue-grey darken-3" style="margin-top: 33px;" href="#modal1">Add your review</a>
         </div>     
       </div>
       <!-- card for comment elem -->
@@ -105,12 +113,15 @@
         <textarea name="comment-text" id="comment-text" cols="30" rows="20"
           placeholder="Hands down, best issue of the series"></textarea>
         <div class="modal-footer">
-          <a href="#!" id="commentSubmit" class="modal-close waves-effect waves-green btn">Submit Review</a>
+          <a href="#!" id="commentSubmit" class="modal-close waves-effect waves-light btn blue-grey darken-4">Submit Review</a>
         </div>
       </div>
     </div>
     
-  <!-- footer -->
+  <!-- parallax + footer -->
+  <div class="parallax-container">
+    <div class="parallax"><img src="./assets/image/header.jpg"></div>
+  </div>
   <div class="section footerColor" style="padding-top: 2%;">
     <div class="row container">
       <!-- padding div -->
@@ -118,29 +129,26 @@
       <!-- contact stuff! -->
       <div class="col s3">
         <h5 class="white-text my-h5">Connect with us:</h5>
-        <p class="white-text">Get to know our devs a little better!</p>
+        <p class = "white-text">Get to know our devs a little better!</p>
       </div>
       <div class="col s1">
         <h5 class="white-text my-h5">GitHub:</h5>
         <p>
-          <a href="https://github.com/CharlotteFrancis" class="white-text"
-            style="text-decoration: underline;">Charlotte</a>
+          <a href="https://github.com/CharlotteFrancis" class="white-text" style="text-decoration: underline;">Charlotte</a>
         </p>
         <p>
-          <a href="https://github.com/alwayssmellitfirst" class="white-text"
-            style="text-decoration: underline;">Jacob</a>
+          <a href="https://github.com/alwayssmellitfirst" class="white-text" style="text-decoration: underline;">Jacob</a>
         </p>
         <p>
-          <a href="https://github.com/DeviantSchemist" class="white-text"
-            style="text-decoration: underline;">Michael</a>
+          <a href="https://github.com/DeviantSchemist" class="white-text" style="text-decoration: underline;">Michael</a>
         </p>
         <p>
           <a href="https://github.com/bronsonsoda" class="white-text" style="text-decoration: underline;">Bronson</a>
         </p>
       </div>
-      <div class="col s2">
+      <div class="col s4">
         <!-- DO NOT FIX THIS h5 TAG IT HAS AN INVISIBLE ASCII CHARACTER IN IT, ITS INTENTIONAL -->
-        <h5 class="white-text my-h5">‌‌
+        <h5 class="white-text my-h5">‌‌ 
         </h5>
         <p>
           <a class="github-button" href="https://github.com/CharlotteFrancis"> Follow @CharlotteFrancis</a>
@@ -156,28 +164,21 @@
         </p>
       </div>
       <div class="col s2">
-        <h5 class="white-text my-h5">LinkedIn:</h5>
-        <p class="white-text" style="text-decoration: underline;">test</p>
-        <p class="white-text" style="text-decoration: underline;">test</p>
-        <p class="white-text" style="text-decoration: underline;">test</p>
-        <p class="white-text" style="text-decoration: underline;">test</p>
-      </div>
-      <div class="col s2">
         <h5 class="white-text my-h5">Cool links:</h5>
         <p>
-          <a href="https://github.com/CharlotteFrancis/ComicCol" class="white-text"
-            style="text-decoration: underline;">GitHub Repository</a>
+          <a href="https://github.com/CharlotteFrancis/ComicCol" class="white-text" style="text-decoration: underline;">Our GitHub Repository</a>
         </p>
         <p>
-          <a href="https://comicvine.gamespot.com/" class="white-text" style="text-decoration: underline;">ComicVine</a>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol" data-icon="octicon-star" aria-label="Star CharlotteFrancis/ComicCol on GitHub">Star</a>
         </p>
         <p>
-          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol" data-icon="octicon-star"
-            aria-label="Star CharlotteFrancis/ComicCol on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol/subscription" data-icon="octicon-eye" aria-label="Watch CharlotteFrancis/ComicCol on GitHub">Watch</a>
         </p>
         <p>
-          <a class="github-button" href="https://github.com/CharlotteFrancis/ComicCol/subscription"
-            data-icon="octicon-eye" aria-label="Watch CharlotteFrancis/ComicCol on GitHub">Watch</a>
+          <a href="https://www.marvel.com/comics/creators/758/leinil_francis_yu" class="white-text" style="text-decoration: underline;">Header Artist: Leinil Yu</a>
+        </p>
+        <p>
+          <a href="https://comicvine.gamespot.com/" class="white-text" style="text-decoration: underline;">Comic Api: ComicVine</a>
         </p>
       </div>
       <!-- padding div -->
@@ -190,7 +191,7 @@
       <!-- padding div -->
       <div class="col s1"></div>
       <div class="col s11">
-        <p class="white-text">© 2021 Project 2 Group</p>
+        <p class="white-text">© 2021 Charlotte Wong, Jacob Zavita, Michael Ngo, Bronson Perez</p>
       </div>
     </div>
   </div>
@@ -213,13 +214,21 @@
         })
   </script>
 
-    <!-- comment/review modal -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);
-      });
-    </script>
+  <!-- materialize parallax -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax')
+    var instances = M.Parallax.init(elems, {})
+    })
+  </script>
+
+  <!-- comment/review modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
 
   <!-- gitHub button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
