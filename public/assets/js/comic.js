@@ -67,3 +67,21 @@ renderReviews = (reviews) => {
 }
 
 renderReviews()
+
+// event listener for posting a review
+document.getElementById('commentSubmit').addEventListener('click', event => {
+  event.preventDefault()
+  axios.post('/api/review',
+    {
+      text: document.getElementById('comment-text').value
+    }, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then(({ data: review }) => {
+      console.log(review)
+      // renderReviews(review)
+    })
+    .catch(err => console.log(err))
+})
