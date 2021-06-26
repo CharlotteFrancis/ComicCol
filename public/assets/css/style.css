@@ -73,7 +73,9 @@
   width: 30%;
   overflow: visible;
 }
-
+.modal-review{
+  height: 200px;
+}
 @media screen and (max-width: 650px) {
   .scrolling-wrapper {
     overflow-x: scroll;
@@ -83,6 +85,9 @@
   .mobile-modal {
     width: 80%;
     overflow: visible;
+  }
+  .mobile-review-modal {
+    height: 100px;
   }
 }
 
@@ -236,10 +241,3 @@ table.striped>tbody>tr:nth-child(odd) {
 .textWhite {
   color: #FFFCF2 !important;
 }
-<<<<<<< HEAD
-
-.card-content p {
-  font-size: 1vw;
-}
-=======
->>>>>>> c66754aadc66664c58ed7ec7258b6a280d36a8fc
