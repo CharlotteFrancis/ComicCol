@@ -77,6 +77,7 @@ renderSingleComic = (comic) => {
     })
     .catch(_ => {
       document.getElementById('addYourReview').classList.add('hide')
+      document.getElementById('reviewText').classList.add('hide')
       console.log('no reviews')
     })
 }

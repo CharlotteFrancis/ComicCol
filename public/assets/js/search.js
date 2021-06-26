@@ -23,7 +23,7 @@ const createComic = comic => {
 const renderRequest = comics => {
   comics.forEach((element, i) => {
     const comic = document.createElement('div')
-    comic.classList = 'col s4 search-card-height search-card-width'
+    comic.classList = 'col s4 search-card-height search-card-width comicCard'
     comic.innerHTML = `
     <div class="card horizontal">
       <div class="card-image">
@@ -58,6 +58,7 @@ document.getElementById('searchSubmit').addEventListener('click', event => {
       clearComics()
       renderRequest(comics.data)
       document.getElementById('spinner').classList = 'hide'
+      sizeFunction()
     })
     .catch(err => console.log(err))
 })
@@ -182,3 +183,25 @@ document.addEventListener('click', event => {
     window.location = `./comic.html?query1=${query1} ${query2} ${query3}`
   }
 })
+
+const sizeFunction = _ => {
+  let thisWidth = window.outerWidth
+
+  if (thisWidth < 1350 && thisWidth >= 725) {
+    // document.getElementsByClassName('comicCard').classList = 'col s6 search-card-height search-card-width comicCard'
+    const elems = document.getElementsByClassName('comicCard')
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].classList = 'col s6 search-card-height search-card-width comicCard'
+    }
+  } else if (thisWidth < 725) {
+    const elems = document.getElementsByClassName('comicCard')
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].classList = 'col s12 search-card-height search-card-width comicCard'
+    }
+  } else {
+    const elems = document.getElementsByClassName('comicCard')
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].classList = 'col s4 search-card-height search-card-width comicCard'
+    }
+  }
+}
