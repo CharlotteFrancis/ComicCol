@@ -188,6 +188,8 @@
     <!-- End of modal -->
   </main>
 
+  <br class="hide-on-med-and-up">
+  
   <!-- parallax + footer -->
   <div class="parallax-container">
     <div class="parallax"><img src="./assets/image/header.jpg"></div>
@@ -316,6 +318,29 @@
   <script src="assets/js/navbar.js"></script>
   <script>
 
+    const resizeFunction = _ => {
+      let thisWidth = window.outerWidth
+      console.log(thisWidth)
+    
+      if (thisWidth < 1350 && thisWidth >= 725) {
+        // document.getElementsByClassName('comicCard').classList = 'col s6 search-card-height search-card-width comicCard'
+        const elems = document.getElementsByClassName('comicCard')
+        for ( let i = 0; i < elems.length; i++) {
+          elems[i].classList = 'col s6 search-card-height search-card-width comicCard'
+        }
+      } else if (thisWidth < 725) {
+        const elems = document.getElementsByClassName('comicCard')
+        for ( let i = 0; i < elems.length; i++) {
+          elems[i].classList = 'col s12 search-card-height search-card-width comicCard'
+        }
+      } else {
+        const elems = document.getElementsByClassName('comicCard')
+        for ( let i = 0; i < elems.length; i++) {
+          elems[i].classList = 'col s4 search-card-height search-card-width comicCard'
+        }
+      }
+    }
+    window.onresize = resizeFunction
   </script>
 </body>
 
