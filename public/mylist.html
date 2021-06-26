@@ -10,6 +10,7 @@
   <!-- materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/containersize.css">
   <style>
   </style>
   <title>ComicCol</title>
@@ -86,12 +87,14 @@
             <!-- TITLE -->
             <li class="collection-item list-title white-text center"><h5>Comic List</h5></li>
           </ul>
-          <!-- item table -->
+          <!-- scrolling table for mobile -->
+          <div class= "scrolling-wrapper">
+            <!-- item table -->
           <table class="striped centered list-border">
             <!-- TABLE HEAD -->
             <thead>
               <!-- COVER -- COMIC TITLE -- ISSUE -- ISSUE NAME-- SCORE -- PROGRESS -->
-              <tr class="">
+              <tr class=""> 
                   <th class="list-th">Cover</th>
                   <th class="list-th">Title</th>
                   <th class="list-th">Issue</th>
@@ -133,13 +136,15 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
         <br>
       </div>
   </div>
 
   <!-- MODAL -->
-  <div id="modal1" class="modal" style="width: 30%; overflow: visible;">
+  <!--mobile-modal is resizing the modal for mobile devices-->
+  <div id="modal1" class="modal mobile-modal">
     <div class="modal-content">
       <blockquote style="margin-bottom: 5px; border-color: #263238;">
       <h5 id="modalTitle"></h5>
@@ -227,16 +232,16 @@
         <!-- DO NOT FIX THIS h5 TAG IT HAS AN INVISIBLE ASCII CHARACTER IN IT, ITS INTENTIONAL -->
         <h5 class="white-text my-h5">‌‌ 
         </h5>
-        <p>
+        <p class="hide-on-med-and-down">
           <a class="github-button" href="https://github.com/CharlotteFrancis"> Follow @CharlotteFrancis</a>
         </p>
-        <p>
+        <p class="hide-on-med-and-down">
           <a class="github-button" href="https://github.com/alwayssmellitfirst"> Follow @alwayssmellitfirst</a>
         </p>
-        <p>
+        <p class="hide-on-med-and-down">
           <a class="github-button" href="https://github.com/DeviantSchemist"> Follow @DeviantSchemist</a>
         </p>
-        <p>
+        <p class="hide-on-med-and-down">
           <a class="github-button" href="https://github.com/bronsonsoda"> Follow @bronsonsoda</a>
         </p>
       </div>

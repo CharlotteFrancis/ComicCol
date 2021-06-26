@@ -76,7 +76,8 @@ renderSingleComic = (comic) => {
         .catch(err => console.log('There is an error in the get comic by id: ', err))
     })
     .catch(_ => {
-      document.getElementById('commentSubmit').classList.add('hide')
+      document.getElementById('addYourReview').classList.add('hide')
+      document.getElementById('reviewText').classList.add('hide')
       console.log('no reviews')
     })
 }
