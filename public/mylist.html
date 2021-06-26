@@ -87,12 +87,14 @@
             <!-- TITLE -->
             <li class="collection-item list-title white-text center"><h5>Comic List</h5></li>
           </ul>
-          <!-- item table -->
+          <!-- scrolling table for mobile -->
+          <div class= "scrolling-wrapper">
+            <!-- item table -->
           <table class="striped centered list-border">
             <!-- TABLE HEAD -->
             <thead>
               <!-- COVER -- COMIC TITLE -- ISSUE -- ISSUE NAME-- SCORE -- PROGRESS -->
-              <tr class="">
+              <tr class=""> 
                   <th class="list-th">Cover</th>
                   <th class="list-th">Title</th>
                   <th class="list-th">Issue</th>
@@ -134,13 +136,15 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
         <br>
       </div>
   </div>
 
   <!-- MODAL -->
-  <div id="modal1" class="modal" style="width: 30%; overflow: visible;">
+  <!--mobile-modal is resizing the modal for mobile devices-->
+  <div id="modal1" class="modal mobile-modal">
     <div class="modal-content">
       <blockquote style="margin-bottom: 5px; border-color: #263238;">
       <h5 id="modalTitle"></h5>
