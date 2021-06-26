@@ -20,8 +20,8 @@ getComic()
 
 renderSingleComic = (comic) => {
   let comicData = document.createElement('div')
-  comicData.classList = 'card horizontal rounded-corners'
   comicData.innerHTML = `
+    <div class="card horizontal rounded-corners hide-on-small-only">
       <div class="card-image">
         <img class="materialboxed" src="${comic.data[0].image.super_url}">
       </div>
@@ -36,7 +36,23 @@ renderSingleComic = (comic) => {
           <h5>Description:</h5>
           ${comic.data[0].description}
         </div>
-        <div class="card-action">
+      </div>
+    </div>
+    <div class="card rounded-corners hide-on-med-and-up">
+      <div class="card-image">
+        <img class="materialboxed" src="${comic.data[0].image.super_url}">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h3>${comic.data[0].volume.name} #${comic.data[0].issue_number}</h3>
+          <hr style="width: 35%;" class="left">
+          <br>
+          <h5 style="display: inline;">${comic.data[0].name}</h5> 
+          <h5 style="display: inline;"> · </h5>
+          <h5 style="display: inline;">${comic.data[0].cover_date}</h5>
+          <h5>Description:</h5>
+          ${comic.data[0].description}
+        </div>
       </div>
     </div>
     `
@@ -77,7 +93,7 @@ const renderReviews = (review) => {
             <p class="card-title">
               <h6 style="margin-bottom: 2px; display: inline;">${whatIsThis.username}</h6>
               <p style="display: inline; font-size:small">·</p>
-              <p style="display: inline;">${review.createdAt}</p>
+              <p style="display: inline;">${review.createdAt.slice(0, 10)}</p>
             </p>
             <hr>
             ${review.text}
