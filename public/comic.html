@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <style>
   </style>
@@ -66,9 +68,11 @@
         <form>
           <div class="input-field">
             <label for="feedback">Give us feedback!</label>
-            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            <textarea name="feedback" id="feedback" class="textWhite" cols="30" rows="10"></textarea>
           </div>
-          <button id="feedbackSubmit" type="submit">Send</button>
+          <button id="feedbackSubmit" class="btn waves-effect waves-light" type="submit" name="action">Send
+            <i class="material-icons right">send</i>
+          </button>
         </form>
       </div>
     </div>
