@@ -35,6 +35,6 @@ _**Project Requirements:**_
 13. Must have a professional README (unique name, description, link to the deployed app)
 
 
-![project 2 ](https://gyazo.com/bc2dc6f825e1ad57bcd6af72b74a0b17)
+![project 2 ](https://gyazo.com/bc2dc6f825e1ad57bcd6af72b74a0b17.gif)
 
-![project 2](https://gyazo.com/fe97d6001bced9afa4ae291ee46ca287)
+![project 2](https://gyazo.com/fe97d6001bced9afa4ae291ee46ca287.gif)
