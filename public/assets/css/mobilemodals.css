@@ -1,0 +1,21 @@
+.modal {
+  width: 60%;
+  overflow: visible;
+}
+.modal-review{
+  height: 200px;
+}
+@media screen and (max-width: 650px) {
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .mobile-modal {
+    width: 80%;
+    overflow: visible;
+  }
+  .mobile-review-modal {
+    height: 100px;
+  }
+}
