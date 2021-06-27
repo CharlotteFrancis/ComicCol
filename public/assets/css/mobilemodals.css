@@ -2,9 +2,11 @@
   width: 60%;
   overflow: visible;
 }
-.modal-review{
+
+.modal-review {
   height: 200px;
 }
+
 @media screen and (max-width: 650px) {
   .scrolling-wrapper {
     overflow-x: scroll;
@@ -17,5 +19,9 @@
   }
   .mobile-review-modal {
     height: 100px;
+  }
+  .mobile-carousel-scroll-original {
+    width: 1000px;
+    margin-left: -310px;
   }
 }
