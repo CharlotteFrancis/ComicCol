@@ -56,6 +56,7 @@
     <li><a class="waves-effect" href="/search.html">Search</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">User Validation</a></li>
+    <li><a class="waves-effect modal-trigger" href="#modal6">Feedback</a></li>
     <li><a class="waves-effect" href="login.html">Log In</a></li>
     <li><a class="waves-effect" href="login.html">Log Out</a></li>
   </ul>
@@ -252,6 +253,21 @@
       </div>
     </div>
 
+    <!-- MODAL 6 (MODAL FOR FEEDBACK BUTTON ON SIDE NAV) -->
+    <div id="modal6" class="modal blue-grey darken-4 rounded-corners my-modal">
+      <div class="modal-content card horizontal blue-grey darken-4 remove-bottom-margin remove-top-margin">
+        <div class="row">
+          <form>
+            <div class="input-field">
+              <label for="feedback">Give us feedback!</label>
+              <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            </div>
+            <button id="feedbackSubmit" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- make these two mobile adjustable -->
@@ -378,7 +394,7 @@
   <!-- navbar js -->
   <script src="./assets/js/navbar.js"></script>
   <script>
-
+    
   </script>
 </body>
 
